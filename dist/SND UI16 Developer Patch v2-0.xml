@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2016-10-02 15:36:10">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Enhance the UI16 experience</description>
+<inserted/>
+<name>SND UI16 Developer Patch</name>
+<origin_sys_id/>
+<release_date>2016-10-02 15:35:56</release_date>
+<remote_sys_id>ac7a8f580f126a00c55a09ece1050e5b</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>0a8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_c27379180f9e2a00c55a09ece1050e85</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The maximum width option for the Update Set and Application header choice lists.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.width.max</name><read_roles/><suffix>snd_ui16dp.pickers.width.max</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:17:04</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>c27379180f9e2a00c55a09ece1050e85</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.pickers.width.max</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_c27379180f9e2a00c55a09ece1050e85</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:22:06</sys_updated_on><type>integer</type><value>300</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=c27379180f9e2a00c55a09ece1050e85"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>028a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.max</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_dde443180f126a00c55a09ece1050ec7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>600</order><property display_value="snd_ui16dp.pickers.width.min" name="snd_ui16dp.pickers.width.min">4d0475940f9e2a00c55a09ece1050e6b</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 15:11:33</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>dde443180f126a00c55a09ece1050ec7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.pickers.width.min.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_dde443180f126a00c55a09ece1050ec7</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 15:11:33</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>068a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.min.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_fed97a500f126a00c55a09ece1050e8d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>300</order><property display_value="snd_ui16dp.pickers.active" name="snd_ui16dp.pickers.active">ded7f5980f9e2a00c55a09ece1050e66</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>fed97a500f126a00c55a09ece1050e8d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.active.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_fed97a500f126a00c55a09ece1050e8d</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:25:04</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>0a8a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_3d27f1980f9e2a00c55a09ece1050e55</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the application and update set picker icons</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.icon.active</name><read_roles/><suffix>snd_ui16dp.pickers.icon.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:32:08</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>3d27f1980f9e2a00c55a09ece1050e55</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.icon.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_3d27f1980f9e2a00c55a09ece1050e55</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:21:05</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=3d27f1980f9e2a00c55a09ece1050e55"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>0e8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.icon.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_4b9d58530fd81200c55a09ece1050e8f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description&gt;UI16 Developer Patch&amp;#13;
+Configuration can be modified using system properties prefixed with 'snd_ui16dp'.&lt;/description&gt;&lt;global&gt;true&lt;/global&gt;&lt;name&gt;snd_ui16_developer_patch&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/*!
+  UI16 Developer Patch
+  Configuration can be modified using system properties prefixed with 'snd_ui16dp'.
+
+  James Neale &lt;james@sndeveloper.com&gt;
+*/
+
+if (!window.top.hasOwnProperty('snd_ui16_developer_patch')) {
+  jslog('snd_ui16_developer_patch loading in top window.');
+  (function (t) {
+    var i;
+    t.snd_ui16_developer_patch = null;
+
+    // run an interval because depending on ServiceNow version, this script
+    // can load before jQuery does.
+    i = setInterval(function () {
+      if (typeof t.jQuery === 'function') {
+        t.jQuery.getScript('/snd_ui16_developer_patch.jsdbx');
+        clearInterval(i);
+      }
+    }, 500);
+  })(window.top);
+}
+
+else if (window.top.snd_ui16_developer_patch != null) {
+  //jslog('snd_ui16_developer_patch already applied!');
+}
+
+else if (window == window.top) {
+  (function ($, window) {
+
+    var config = {
+
+      // Patch the navigator right click context menu
+      navigator_context: {
+        active: "${snd_ui16dp.navigator.context.active}" == "true",
+      },
+
+      // Patch the application and update set picker widths
+      picker_width: {
+        active: "${snd_ui16dp.pickers.active}" == "true",
+
+        // Integer. Maximum width in pixels we would ever really need
+        max_width: parseInt("${snd_ui16dp.pickers.width.max}", 10) || 300,
+
+        // Integer. Minimum width in pixels.
+        // We use 120 from ServiceNow CSS class .navpage-pickers .selector
+        min_width: parseInt("${snd_ui16dp.pickers.width.min}", 10) || 120,
+
+        // Integer. Time in ms to wait so that everything can load.
+        load_timeout: parseInt("${snd_ui16dp.pickers.timeout}", 10) || 2000,
+
+        // the width of the header search when it has focus
+        max_search_width: parseInt("${snd_ui16dp.pickers.max_search_width}", 10) || 150
+      },
+
+      // Patch the application and update set picker icons
+      picker_icon: {
+        active: "${snd_ui16dp.pickers.icon.active}" == "true"
+      },
+
+      profile_menu: {
+        active: "${snd_ui16dp.profile.menu.active}" == "true"
+      }
+
+    };
+
+    $.fn.snd_ui16dp_menu = (function () {
+
+      var menus = {},
+          loaded = false;
+
+      function getMenuPosition($menu, mouse, direction, scrollDir) {
+        var win = $(window)[direction](),
+            scroll = $(window)[scrollDir](),
+            menu = $menu[direction](),
+            position = mouse + scroll;
+
+        // opening menu would pass the side of the page
+        if (mouse + menu &gt; win &amp;&amp; menu &lt; mouse) position -= menu;
+
+        return position;
+      }
+
+      function closeAll() {
+        for (var id in menus) {
+          $(id).hide();
+        }
+      }
+
+      return function (settings) {
+
+        menus[settings.menu_id] = true;
+
+        if (!loaded) {
+
+          //make sure menus close on main document click
+          $(document).click(function () {
+            closeAll();
+          });
+
+          // make sure menus close if any frame is clicked
+          $('iframe').on('load', function () {
+             $(this).contents().on('click', function () {
+                closeAll();
+             });
+          });
+
+          loaded = true;
+        }
+
+        return this.each(function () {
+
+          // Open context menu
+          $(this).on(settings.event || 'click', settings.selector, function (e) {
+
+            var $menu;
+
+            closeAll();
+
+            // perform native action if pressing control
+            if (e.ctrlKey) return;
+
+            //open menu
+            $menu = $(settings.menu_id);
+            $menu.data("invokedOn", $(e.target))
+              .show()
+              .css({
+                  position: "absolute",
+                  left: getMenuPosition($menu, e.clientX, 'width', 'scrollLeft'),
+                  top: getMenuPosition($menu, e.clientY, 'height', 'scrollTop')
+              })
+              .off('click')
+              .on('click', 'a', function (e) {
+                  $menu.hide();
+
+                  var $invokedOn = $menu.data("invokedOn");
+                  var $selectedMenu = $(e.target);
+
+                  settings.callback.call(this, $invokedOn, $selectedMenu);
+              });
+
+            return false;
+          });
+        });
+      };
+    })();
+
+    /**
+      summary:
+        Check if we are using UI16 by looking for the overview help element.
+        Thanks to Tim Boelema for finding this element and sharing on community.
+    **/
+    function isUI16() {
+      if (!window.top.angular) return false;
+      var a = window.top.angular.element('overviewhelp').attr('page-name');
+      return a == 'ui16' || a == 'helsinki';
+    }
+
+    // create the context menus dynamically
+    function createContextMenu(id, items) {
+      var menu, i;
+      menu = '&lt;ul id="' + id + '" class="dropdown-menu" role="menu" ' +
+             'style="display: none; z-index: 999;"&gt;';
+
+      for (i = 0; i &lt; items.length; i++) {
+        if (items[i] === '-') {
+          menu += '&lt;li class="divider"&gt;&lt;/li&gt;';
+        } else {
+          menu += '&lt;li&gt;&lt;a href="#" tabindex="-1"&gt;' + items[i] + '&lt;/a&gt;&lt;/li&gt;';
+        }
+      }
+
+      menu += '&lt;/ul&gt;';
+      $('body').append(menu);
+    }
+
+    /**
+    summary:
+      Allow quick access to navigator records in Geneva
+    description:
+      Holding a key and clicking mouse button 2 will open the
+      application or module record that was clicked.
+      This saves going to applications or modules to find it.
+    **/
+    function navigatorPatch() {
+
+      if (!userHasRole('teamdev_configure_instance')) {
+        return;
+      }
+
+      createContextMenu('snd_ui16dp_navigator_module_menu', [
+        'Edit module'
+      ]);
+
+      $('#gsft_nav').snd_ui16dp_menu({
+          event: 'contextmenu',
+          selector: 'a[data-id]',
+          menu_id: "#snd_ui16dp_navigator_module_menu",
+          callback: function (invokedOn, selectedMenu) {
+            var id = invokedOn.attr('data-id'),
+                url = '/sys_app_module.do';
+            if (!id) {
+              jslog('No data id.');
+              return;
+            }
+            if (selectedMenu.text() == 'Edit module') {
+              if (invokedOn.hasClass('nav-app')) {
+                url = '/sys_app_application.do';
+              }
+
+              jslog('snd_ui16_developer_patch opening navigation module');
+              openLink(url + '?sys_id=' + id);
+            } else {
+              jslog('Unknown item selected.');
+            }
+          }
+      });
+      jslog('snd_ui16_developer_patch navigator patch applied');
+    }
+
+    /**
+      summary:
+        Update the developer choice list widths to be a bit wider
+      description:
+        Gets the widths of various header elements and calculates
+        the remaining width available then divides it between the
+        pickers shown.
+    **/
+    function pickerWidthPatch(offset) {
+      var max_width = config.picker_width.max_width,
+          oobWidth = config.picker_width.min_width,
+          pickers = $('.navpage-pickers .selector.three-controls'),
+          navWidth,
+          logoWidth,
+          floatWidth,
+          diff,
+          size;
+
+      if (!pickers.length) {
+        jslog('snd_ui16_developer_patch picked width patch failed. No pickers found.');
+        return;
+      }
+
+      pickers.css('width', ''); // reset so we recalculate
+
+      navWidth = $('header.navpage-header').width();
+      logoWidth = $('div.navbar-header').outerWidth();
+      floatWidth = $('div.navbar-right').outerWidth();
+
+      diff = navWidth - logoWidth - floatWidth - (offset || 0);
+
+      size = 100 + (diff / pickers.length);
+
+      size = size &lt; oobWidth ? '' : size &gt; max_width ? max_width : size;
+      pickers.css('width', size);
+
+      jslog('snd_ui16_developer_patch picker width patch applied (diff: ' + diff + '; size: ' + size + ')');
+    }
+
+    /**
+      summary:
+        Make the update set and application icons clickable
+      description:
+        Geneva doesn't allow you to get to the update sets or applications
+        easily from the header because the icons are not links.
+        This makes the icons clickable.
+    **/
+    function pickerIconPatch() {
+
+      var is_admin = userHasRole(),
+          pickers,
+          items;
+
+      items = [
+        'View Current',
+        'Create New',
+        '-',
+        'View All',
+        'View In Progress'
+      ];
+
+      if (is_admin) items.push('View Retrieved');
+      items.push('-');
+      items.push('Refresh');
+      if (is_admin) items.push('Import from XML');
+
+      createContextMenu('snd_ui16dp_updateset_menu', items);
+
+      // patch update set picker
+      pickers = $('.concourse-update-set-picker span.label-icon');
+      if (pickers.length) {
+        pickers.snd_ui16dp_menu({
+          menu_id: "#snd_ui16dp_updateset_menu",
+          callback: function (invokedOn, selectedMenu) {
+            switch (selectedMenu.text()) {
+              case 'View Current':
+                var sys_id = $('#update_set_picker_select').val();
+                if (sys_id) {
+                  sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+                  openLink('/sys_update_set.do?sys_id=' + sys_id);
+                }
+                break;
+              case 'Create New':
+                openLink('/sys_update_set.do?sys_id=-1');
+                break;
+              case 'View All':
+                openLink('sys_update_set_list.do');
+                break;
+              case 'View In Progress':
+                openLink('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
+                break;
+              case 'View Retrieved':
+                openLink('sys_remote_update_set_list.do');
+                break;
+              case 'Import from XML':
+                var url = 'upload.do';
+                url += '?';
+                url += 'sysparm_referring_url=sys_remote_update_set_list.do';
+                url += '&amp;';
+                url += 'sysparm_target=sys_remote_update_set';
+                openLink(url);
+                break;
+              case 'Refresh':
+                refreshPickers();
+                break;
+              default:
+                jslog('Unknown item selected.');
+            }
+          }
+        }).css('cursor', 'pointer');
+        jslog('snd_ui16_developer_patch icon picker patch applied to update set picker.');
+      } else {
+        jslog('snd_ui16_developer_patch icon picker patch unable to find update set picker.');
+      }
+
+      createContextMenu('snd_ui16dp_application_menu', [
+        'View Current',
+        'Create New',
+        '-',
+        'View All',
+        'App Manager',
+        'Refresh'
+      ]);
+
+      // patch application picker
+      pickers = $('.concourse-application-picker span.label-icon');
+      if (pickers.length) {
+        pickers.snd_ui16dp_menu({
+          menu_id: "#snd_ui16dp_application_menu",
+          callback: function (invokedOn, selectedMenu) {
+            switch (selectedMenu.text()) {
+              case 'View Current':
+                var sys_id = $('#application_picker_select').val();
+                if (sys_id) {
+                  sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+                  openLink('/sys_scope.do?sys_id=' + sys_id);
+                }
+                break;
+              case 'Create New':
+                openLink('$sn_appcreator.do');
+                break;
+              case 'View All':
+                openLink('sys_scope_list.do');
+                break;
+              case 'App Manager':
+                openLink('$myappsmgmt.do');
+                break;
+              case 'Refresh':
+                refreshPickers();
+                break;
+              default:
+                jslog('Unknown item selected.');
+            }
+          }
+        }).css('cursor', 'pointer');
+        jslog('snd_ui16_developer_patch icon picker patch applied to application picker.');
+      } else {
+        jslog('snd_ui16_developer_patch icon picker patch unable to find application picker.');
+      }
+
+    }
+
+    function profileMenuPatch() {
+      var tmp;
+      // will only add unimpersonate link if impersonate link is found
+      tmp = $('#user_info_dropdown').next('ul').find('[sn-modal-show="impersonate"]');
+      if (tmp) {
+        tmp.parent().after('&lt;li&gt;&lt;a href="snd_ui16dp_unimpersonate.do"' +
+            ' target="gsft_main"&gt;Unimpersonate&lt;/a&gt;');
+        jslog('snd_ui16_developer_patch user menu patch applied.');
+      }
+    }
+
+    function openLink(target) {
+      jslog('snd_ui16_developer_patch opening target: ' + target);
+      var frame = $('#gsft_main');
+      if (frame.length) {
+        frame[0].src = target;
+      } else {
+        jslog('&gt; gsftMain frame not found.');
+      }
+    }
+
+    function refreshPickers() {
+      var injector = angular.element('body').injector();
+      injector.get('snCustomEvent').fire('sn:refresh_update_set');
+      injector.get('applicationService').getApplicationList();
+    }
+
+    function patch() {
+
+      // === run the navigator module opening mod ===
+      if (config.navigator_context.active) {
+        navigatorPatch();
+      }
+
+      // === enhance the picker width ===
+      if (config.picker_width.active) {
+
+        // set the picker width once the page has loaded
+        setTimeout(function () {
+          pickerWidthPatch();
+        }, config.picker_width.load_timeout);
+
+        // resizing the window will resize the pickers
+        angular.element(window).on('resize', function () {
+          pickerWidthPatch();
+        });
+
+        $('input#sysparm_search').focus(function () {
+          pickerWidthPatch(config.picker_width.max_search_width);
+        });
+        $('input#sysparm_search').blur(function () {
+          setTimeout(function () {
+            pickerWidthPatch();
+          }, 500); // the length of time it takes for blur to occur
+        });
+      }
+
+      // === make the picker icons clickable ===
+      if (config.picker_icon.active) {
+        pickerIconPatch();
+      }
+
+      // === augment the user menu ===
+      if (config.profile_menu.active) {
+        profileMenuPatch();
+      }
+    }
+
+    function userHasRole(role) {
+      var roles = (',' + window.NOW.user.roles + ','),
+          is_admin = roles.indexOf(',admin,') &gt; -1;
+      if (roles) {
+        return is_admin || roles.indexOf(',' + role + ',') &gt; -1;
+      }
+      return is_admin;
+    }
+
+    $(document).ready(function () {
+      try {
+        if (!isUI16()) {
+          window.snd_ui16_developer_patch = false;
+          jslog('snd_ui16_developer_patch ignored. Not UI16.');
+        } else {
+          jslog('Running snd_ui16_developer_patch...');
+          patch();
+          window.snd_ui16_developer_patch = true;
+        }
+      } catch (e) {
+        jslog('SND Developer Patch UI16 mod failure: ' + e);
+      }
+    });
+
+  })(jQuery, window);
+}]]&gt;&lt;/script&gt;&lt;script_name/&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@snd&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-18 04:26:09&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;4b9d58530fd81200c55a09ece1050e8f&lt;/sys_id&gt;&lt;sys_mod_count&gt;124&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16_developer_patch&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="SND UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_4b9d58530fd81200c55a09ece1050e8f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@sndeveloper.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2016-10-02 15:33:29&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>0e8a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16_developer_patch</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_c125b5580f9e2a00c55a09ece1050e59</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category"><sys_properties_category action="INSERT_OR_UPDATE"><name>SND UI16 Developer Patch</name><sys_class_name>sys_properties_category</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:23:49</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>c125b5580f9e2a00c55a09ece1050e59</sys_id><sys_mod_count>2</sys_mod_count><sys_name>SND UI16 Developer Patch</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_c125b5580f9e2a00c55a09ece1050e59</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:15:20</sys_updated_on><title/></sys_properties_category><sys_translated_text action="delete_multiple" query="documentkey=c125b5580f9e2a00c55a09ece1050e59"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>428a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>SND UI16 Developer Patch</target_name>
+<type>System Property Category</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_f2d97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>400</order><property display_value="snd_ui16dp.pickers.icon.active" name="snd_ui16dp.pickers.icon.active">3d27f1980f9e2a00c55a09ece1050e55</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f2d97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.icon.active.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_f2d97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:25:04</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>468a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.icon.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_application_7d67b2100f126a00c55a09ece1050ee3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category/><description/><device_type>browser</device_type><hint/><name>SND UI16 Developer Patch</name><order/><roles>admin</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:12:35</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7d67b2100f126a00c55a09ece1050ee3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>SND UI16 Developer Patch</sys_name><sys_overrides/><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_app_application_7d67b2100f126a00c55a09ece1050ee3</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:12:35</sys_updated_on><title>SND UI16 Developer Patch</title><view_name/></sys_app_application></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>4a8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>SND UI16 Developer Patch</target_name>
+<type>Application Menu</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ddf671980f9e2a00c55a09ece1050ea8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Time in ms to wait so that everything can load before the picker patch is applied.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.timeout</name><read_roles/><suffix>snd_ui16dp.pickers.timeout</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:31:38</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>ddf671980f9e2a00c55a09ece1050ea8</sys_id><sys_mod_count>4</sys_mod_count><sys_name>snd_ui16dp.pickers.timeout</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_ddf671980f9e2a00c55a09ece1050ea8</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:46:58</sys_updated_on><type>integer</type><value>2000</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ddf671980f9e2a00c55a09ece1050ea8"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>4a8a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.timeout</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_4d0475940f9e2a00c55a09ece1050e6b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The default (minimum) width option for the Update Set and Application choice lists. The value is 120 from ServiceNow CSS class '.navpage-pickers .selector'.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.width.min</name><read_roles/><suffix>snd_ui16dp.pickers.width.min</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:18:10</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>4d0475940f9e2a00c55a09ece1050e6b</sys_id><sys_mod_count>4</sys_mod_count><sys_name>snd_ui16dp.pickers.width.min</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_4d0475940f9e2a00c55a09ece1050e6b</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:25:43</sys_updated_on><type>integer</type><value>120</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=4d0475940f9e2a00c55a09ece1050e6b"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>4e8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.min</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_3ad97a500f126a00c55a09ece1050e8d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>100</order><property display_value="snd_ui16dp.navigator.context.active" name="snd_ui16dp.navigator.context.active">7a567d580f9e2a00c55a09ece1050e9a</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>3ad97a500f126a00c55a09ece1050e8d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.navigator.context.active.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_3ad97a500f126a00c55a09ece1050e8d</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:23:19</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>828a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.context.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_f6d97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>500</order><property display_value="snd_ui16dp.pickers.timeout" name="snd_ui16dp.pickers.timeout">ddf671980f9e2a00c55a09ece1050ea8</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f6d97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.timeout.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_f6d97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:25:04</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>868a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.timeout.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_e96776dc0fde2a00c55a09ece1050eef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app"><sys_app action="INSERT_OR_UPDATE"><active>true</active><licensable>true</licensable><logo/><menu display_value="SND UI16 Developer Patch">7d67b2100f126a00c55a09ece1050ee3</menu><name>SND UI16 Developer Patch</name><private>false</private><scope>global</scope><short_description>Enhance the UI16 experience</short_description><source>e96776dc0fde2a00c55a09ece1050eef</source><store_correlation_id/><store_url/><sys_class_name>sys_app</sys_class_name><sys_code/><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:12:35</sys_created_on><sys_id>e96776dc0fde2a00c55a09ece1050eef</sys_id><sys_mod_count>3</sys_mod_count><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 15:35:34</sys_updated_on><template/><user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</user_role><vendor/><vendor_prefix/><version>2.0.1</version></sys_app></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>8a8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>SND UI16 Developer Patch</target_name>
+<type>Custom Application</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ded7f5980f9e2a00c55a09ece1050e66</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the application and update set picker widths.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.active</name><read_roles/><suffix>snd_ui16dp.pickers.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:35:13</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>ded7f5980f9e2a00c55a09ece1050e66</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_ded7f5980f9e2a00c55a09ece1050e66</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:20:36</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ded7f5980f9e2a00c55a09ece1050e66"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>8a8a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_7a567d580f9e2a00c55a09ece1050e9a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the navigator right click context menu.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.navigator.context.active</name><read_roles/><suffix>snd_ui16dp.navigator.context.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:28:49</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>7a567d580f9e2a00c55a09ece1050e9a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.navigator.context.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_7a567d580f9e2a00c55a09ece1050e9a</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:19:39</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7a567d580f9e2a00c55a09ece1050e9a"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>8e8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.context.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_99e443180f126a00c55a09ece1050ec7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>200</order><property display_value="snd_ui16dp.profile.menu.active" name="snd_ui16dp.profile.menu.active">7f1a7a500f126a00c55a09ece1050e94</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 15:11:33</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>99e443180f126a00c55a09ece1050ec7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.profile.menu.active.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_99e443180f126a00c55a09ece1050ec7</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 15:11:33</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>c28a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_fad97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="SND UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>700</order><property display_value="snd_ui16dp.pickers.width.max" name="snd_ui16dp.pickers.width.max">c27379180f9e2a00c55a09ece1050e85</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>fad97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.pickers.width.max.SND UI16 Developer Patch</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_fad97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 15:11:33</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>c68a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.max.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_ca9efe140f126a00c55a09ece1050e57</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="SND UI16 Developer Patch">7d67b2100f126a00c55a09ece1050ee3</application><assessment/><content_page/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Properties</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order/><override_menu_roles>false</override_menu_roles><query>system_properties_ui.do?sysparm_title=SND%20UI16%20Developer%20Patch%20Properties&amp;sysparm_category=SND%20UI16%20Developer%20Patch</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_class_name>sys_app_module</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:44:54</sys_created_on><sys_customer_update>true</sys_customer_update><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ca9efe140f126a00c55a09ece1050e57</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Properties</sys_name><sys_overrides/><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_app_module_ca9efe140f126a00c55a09ece1050e57</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:44:54</sys_updated_on><timeline_page/><title>Properties</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>ca8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>Properties</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_508d621c0fde2a00c55a09ece1050e0f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[window.top.location = '/';]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint/&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;g:evaluate&gt;
+		gs.getSession().onlineUnimpersonate()
+	&lt;/g:evaluate&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;snd_ui16dp_unimpersonate&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@sndeveloper.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2016-10-02 13:30:07&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;508d621c0fde2a00c55a09ece1050e0f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16dp_unimpersonate&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="SND UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_508d621c0fde2a00c55a09ece1050e0f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@sndeveloper.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2016-10-02 14:14:30&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>ca8a8f580f126a00c55a09ece1050e33</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp_unimpersonate</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_7f1a7a500f126a00c55a09ece1050e94</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the profile menu for unimpersonate option.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.profile.menu.active</name><read_roles/><suffix>snd_ui16dp.profile.menu.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:24:28</sys_created_on><sys_customer_update>true</sys_customer_update><sys_id>7f1a7a500f126a00c55a09ece1050e94</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.profile.menu.active</sys_name><sys_package display_value="SND UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="SND UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_7f1a7a500f126a00c55a09ece1050e94</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:26:22</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7f1a7a500f126a00c55a09ece1050e94"/></record_update>]]></payload>
+<remote_update_set display_value="SND UI16 Developer Patch">0a8a8f580f126a00c55a09ece1050e32</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@sndeveloper.com</sys_created_by>
+<sys_created_on>2016-10-02 15:36:10</sys_created_on>
+<sys_id>ce8a8f580f126a00c55a09ece1050e32</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@sndeveloper.com</sys_updated_by>
+<sys_updated_on>2016-10-02 15:36:10</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
