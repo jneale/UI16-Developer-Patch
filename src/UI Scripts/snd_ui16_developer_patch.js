@@ -44,8 +44,9 @@ else if (window == window.top) {
         max_width: parseInt("${snd_ui16dp.pickers.width.max}", 10) || 300,
 
         // Integer. Minimum width in pixels.
-        // We use 120 from ServiceNow CSS class .navpage-pickers .selector
-        min_width: parseInt("${snd_ui16dp.pickers.width.min}", 10) || 120,
+        // 120 is the ServiceNow default, but we use 60 in case the window is 
+        // small and the search bar is opened (otherwise it's unusable)
+        min_width: parseInt("${snd_ui16dp.pickers.width.min}", 10) || 60,
 
         // Integer. Time in ms to wait so that everything can load.
         load_timeout: parseInt("${snd_ui16dp.pickers.timeout}", 10) || 2000,
@@ -54,9 +55,10 @@ else if (window == window.top) {
         max_search_width: parseInt("${snd_ui16dp.pickers.max_search_width}", 10) || 150
       },
 
-      // Patch the application and update set picker icons
+      // Patch the header picker icons
       picker_icon: {
-        active: "${snd_ui16dp.pickers.icon.active}" == "true"
+        active: "${snd_ui16dp.pickers.icon.active}" == "true",
+        domain_table: "${snd_ui16dp.pickers.icon.domain_table}" || "domain"
       },
 
       profile_menu: {
@@ -231,7 +233,7 @@ else if (window == window.top) {
     function pickerWidthPatch(offset) {
       var max_width = config.picker_width.max_width,
           oobWidth = config.picker_width.min_width,
-          pickers = $('.navpage-pickers .selector.three-controls'),
+          pickers = $('.navpage-pickers .selector:has(select)'),
           navWidth,
           logoWidth,
           floatWidth,
@@ -259,6 +261,22 @@ else if (window == window.top) {
       jslog('snd_ui16_developer_patch picker width patch applied (diff: ' + diff + '; size: ' + size + ')');
     }
 
+    function patchIcon(name, className, items, callback) {
+      var id = 'snd_ui16dp_' + name + '_menu',
+          icon;
+      createContextMenu(id, items);
+      icon = $('.' + className + ' span.label-icon');
+      if (icon.length) {
+        icon.snd_ui16dp_menu({
+          menu_id: "#" + id,
+          callback: callback
+        }).css('cursor', 'pointer');
+        jslog('snd_ui16_developer_patch icon picker patch applied to ' + name + ' picker.');
+      } else {
+        jslog('snd_ui16_developer_patch icon picker patch unable to find ' + name + ' picker.');
+      }
+    }
+
     /**
       summary:
         Make the update set and application icons clickable
@@ -268,118 +286,139 @@ else if (window == window.top) {
         This makes the icons clickable.
     **/
     function pickerIconPatch() {
-
       var is_admin = userHasRole(),
-          pickers,
+          domain_table = config.picker_icon.domain_table,
+          callback,
           items;
 
-      items = [
-        'View Current',
-        'Create New',
-        '-',
-        'View All',
-        'View In Progress'
-      ];
-
+      items = [];
+      items.push('View Current');
+      items.push('Create New');
+      items.push('-');
+      items.push('View All');
+      items.push('View In Progress');
       if (is_admin) items.push('View Retrieved');
       items.push('-');
       items.push('Refresh');
       if (is_admin) items.push('Import from XML');
 
-      createContextMenu('snd_ui16dp_updateset_menu', items);
-
-      // patch update set picker
-      pickers = $('.concourse-update-set-picker span.label-icon');
-      if (pickers.length) {
-        pickers.snd_ui16dp_menu({
-          menu_id: "#snd_ui16dp_updateset_menu",
-          callback: function (invokedOn, selectedMenu) {
-            switch (selectedMenu.text()) {
-              case 'View Current':
-                var sys_id = $('#update_set_picker_select').val();
-                if (sys_id) {
-                  sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-                  openLink('/sys_update_set.do?sys_id=' + sys_id);
-                }
-                break;
-              case 'Create New':
-                openLink('/sys_update_set.do?sys_id=-1');
-                break;
-              case 'View All':
-                openLink('sys_update_set_list.do');
-                break;
-              case 'View In Progress':
-                openLink('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
-                break;
-              case 'View Retrieved':
-                openLink('sys_remote_update_set_list.do');
-                break;
-              case 'Import from XML':
-                var url = 'upload.do';
-                url += '?';
-                url += 'sysparm_referring_url=sys_remote_update_set_list.do';
-                url += '&';
-                url += 'sysparm_target=sys_remote_update_set';
-                openLink(url);
-                break;
-              case 'Refresh':
-                refreshPickers();
-                break;
-              default:
-                jslog('Unknown item selected.');
+      callback = function (invokedOn, selectedMenu) {
+        switch (selectedMenu.text()) {
+          case 'View Current':
+            var sys_id = $('#update_set_picker_select').val();
+            if (sys_id) {
+              sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+              openLink('/sys_update_set.do?sys_id=' + sys_id);
             }
-          }
-        }).css('cursor', 'pointer');
-        jslog('snd_ui16_developer_patch icon picker patch applied to update set picker.');
-      } else {
-        jslog('snd_ui16_developer_patch icon picker patch unable to find update set picker.');
-      }
+            break;
+          case 'Create New':
+            openLink('/sys_update_set.do?sys_id=-1');
+            break;
+          case 'View All':
+            openLink('sys_update_set_list.do');
+            break;
+          case 'View In Progress':
+            openLink('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
+            break;
+          case 'View Retrieved':
+            openLink('sys_remote_update_set_list.do');
+            break;
+          case 'Import from XML':
+            var url = 'upload.do';
+            url += '?';
+            url += 'sysparm_referring_url=sys_remote_update_set_list.do';
+            url += '&';
+            url += 'sysparm_target=sys_remote_update_set';
+            openLink(url);
+            break;
+          case 'Refresh':
+            refreshPickers();
+            break;
+          default:
+            jslog('Unknown item selected.');
+        }
+      };
+      patchIcon('updateset', 'concourse-update-set-picker', items, callback);
 
-      createContextMenu('snd_ui16dp_application_menu', [
-        'View Current',
-        'Create New',
-        '-',
-        'View All',
-        'App Manager',
-        'Refresh'
-      ]);
+      // patch application picker icon
+      items = [];
+      items.push('View Current');
+      items.push('Create New');
+      items.push('-');
+      items.push('View All');
+      items.push('App Manager');
+      items.push('-');
+      items.push('Refresh');
 
-      // patch application picker
-      pickers = $('.concourse-application-picker span.label-icon');
-      if (pickers.length) {
-        pickers.snd_ui16dp_menu({
-          menu_id: "#snd_ui16dp_application_menu",
-          callback: function (invokedOn, selectedMenu) {
-            switch (selectedMenu.text()) {
-              case 'View Current':
-                var sys_id = $('#application_picker_select').val();
-                if (sys_id) {
-                  sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-                  openLink('/sys_scope.do?sys_id=' + sys_id);
-                }
-                break;
-              case 'Create New':
-                openLink('$sn_appcreator.do');
-                break;
-              case 'View All':
-                openLink('sys_scope_list.do');
-                break;
-              case 'App Manager':
-                openLink('$myappsmgmt.do');
-                break;
-              case 'Refresh':
-                refreshPickers();
-                break;
-              default:
-                jslog('Unknown item selected.');
+      callback = function (invokedOn, selectedMenu) {
+        switch (selectedMenu.text()) {
+          case 'View Current':
+            var sys_id = $('#application_picker_select').val();
+            if (sys_id) {
+              sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+              openLink('/sys_scope.do?sys_id=' + sys_id);
             }
-          }
-        }).css('cursor', 'pointer');
-        jslog('snd_ui16_developer_patch icon picker patch applied to application picker.');
-      } else {
-        jslog('snd_ui16_developer_patch icon picker patch unable to find application picker.');
-      }
+            break;
+          case 'Create New':
+            openLink('$sn_appcreator.do');
+            break;
+          case 'View All':
+            openLink('sys_scope_list.do');
+            break;
+          case 'App Manager':
+            openLink('$myappsmgmt.do');
+            break;
+          case 'Refresh':
+            refreshPickers();
+            break;
+          default:
+            jslog('Unknown item selected.');
+        }
+      };
+      patchIcon('application', 'concourse-application-picker', items, callback);
 
+      // patch domain picker icon for domain admins only
+      if (userHasRole('domain_admin')) {
+        items = [];
+        items.push('View Current');
+        items.push('Create New');
+        items.push('-');
+        items.push('View All');
+        items.push('Domain Map');
+        items.push('-');
+        items.push('Refresh');
+
+        callback = function (invokedOn, selectedMenu) {
+          switch (selectedMenu.text()) {
+            case 'View Current':
+              var sys_id = $('#domain_picker_select').val();
+              if (sys_id) {
+                sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+                if (sys_id == 'global') {
+                  alert('The global domain does not exist as a domain record.');
+                } else {
+                  openLink('/' + domain_table + '.do?sys_id=' + sys_id);
+                }
+              }
+              break;
+            case 'Create New':
+              openLink(domain_table + '.do?sys_id=-1');
+              break;
+            case 'View All':
+              openLink(domain_table + '_list.do');
+              break;
+            case 'Domain Map':
+              openLink('domain_hierarchy.do?sysparm_stack=no&sysparm_attributes=record=domain,parent=parent,title=name,description=description,baseid=javascript:getPrimaryDomain();');
+              break;
+            case 'Refresh':
+              refreshPickers();
+              break;
+            default:
+              jslog('Unknown item selected.');
+          }
+        };
+        patchIcon('domain', 'concourse-domain-picker', items, callback);
+      }
     }
 
     function profileMenuPatch() {
@@ -427,8 +466,15 @@ else if (window == window.top) {
 
     function refreshPickers() {
       var injector = angular.element('body').injector();
-      injector.get('snCustomEvent').fire('sn:refresh_update_set');
-      injector.get('applicationService').getApplicationList();
+      try {
+        injector.get('snCustomEvent').fire('sn:refresh_update_set');
+      } catch (e) {}
+      try {
+        injector.get('applicationService').getApplicationList();
+      } catch (e) {}
+      try {
+        injector.get('domainService').getDomainList();
+      } catch (e) {}
     }
 
     function patch() {
@@ -454,7 +500,7 @@ else if (window == window.top) {
           }, 1000);
           setTimeout(function () {
             clearInterval(interval);
-          }, config.picker_width.load_timeout + 1000);
+          }, config.picker_width.load_timeout);
 
         }, config.picker_width.load_timeout);
 

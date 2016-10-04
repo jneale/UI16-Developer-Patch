@@ -4,6 +4,9 @@ Useful patches for the ServiceNow UI16 interface. Find more at www.sndeveloper.c
 ### Version 2.1
 * Added AJAX impersonation check option (on by default).
 * Picker width patch runs extra times to counter extreme loading time.
+* Added domain picker support.
+* Improved global search support when using small screens.
+* Removed UI16 medium screen width requirement for pickers.
 
 ### Version 2.0
 * Moved to an application.

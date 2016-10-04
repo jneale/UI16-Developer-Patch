@@ -15,8 +15,14 @@ You can right click on any navigator menu application or module and choose
 
 ### Widened Header Dropdown
 The choice list drop-downs in the header are 120px wide by default. This makes
-them hard to read and work with, so this patch widens the Update Set and
-Application pickers.
+them hard to read and work with, so this patch widens all the selectors in the
+header, including Update Set, Application and Domain pickers.
+
+The pickers are automatically resized when you resize the browser window or when
+you open the global search. They are automatically hidden if there is literally
+no room to show them.
+
+The minimum and maximum widths can be controlled using system properties.
 
 ![Widened Pickers](readme-assets/pickers-wide-compare.png)
 
@@ -47,6 +53,17 @@ Click the icon next to the application menu to view a list of handy actions.
 - Force refresh the application picker.
 
 ![Application Menu](readme-assets/application-menu.png)
+
+### Domain Menu
+Click the icon next to the domain menu to view a list of handy actions. This
+is restricted to the _domain_admin_ role.
+- View the current domain record.
+- Create a new domain.
+- View all the domain records in the current domain.
+- Go directly to the Domain Map.
+- Force refresh the domain picker.
+
+![Application Menu](readme-assets/domain-menu.png)
 
 ### User Profile Menu
 The user profile menu has an 'Unimpersonate' option added so you (and any other
