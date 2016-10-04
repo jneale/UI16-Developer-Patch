@@ -231,12 +231,12 @@ else if (window == window.top) {
         pickers shown.
     **/
     function pickerWidthPatch(offset) {
-      var max_width = config.picker_width.max_width,
-          oobWidth = config.picker_width.min_width,
+      var max_w = config.picker_width.max_width,
+          min_w = config.picker_width.min_width,
           pickers = $('.navpage-pickers .selector:has(select)'),
-          navWidth,
-          logoWidth,
-          floatWidth,
+          nav_w,
+          logo_w,
+          float_w,
           diff,
           size;
 
@@ -245,20 +245,26 @@ else if (window == window.top) {
         return;
       }
 
+      $('.navpage-pickers').css('display', '');
       pickers.css('width', ''); // reset so we recalculate
 
-      navWidth = $('header.navpage-header').width();
-      logoWidth = $('div.navbar-header').outerWidth();
-      floatWidth = $('div.navbar-right').outerWidth();
+      nav_w = $('header.navpage-header').width();
+      logo_w = $('div.navbar-header').outerWidth();
+      float_w = $('div.navbar-right').outerWidth();
 
-      diff = navWidth - logoWidth - floatWidth - (offset || 0);
+      diff = nav_w - logo_w - float_w - (offset || 0);
 
       size = 100 + (diff / pickers.length);
 
-      size = size < oobWidth ? '' : size > max_width ? max_width : size;
-      pickers.css('width', size);
+      size = size > max_w ? max_w : size;
 
-      jslog('snd_ui16_developer_patch picker width patch applied (diff: ' + diff + '; size: ' + size + ')');
+      if (size < min_w) {
+        $('.navpage-pickers').css('display', 'none');
+        jslog('snd_ui16_developer_patch pickers hidden as less than minimum width (' + size + ' < ' + min_w + ')');
+      } else {
+        pickers.css('width', size);
+        jslog('snd_ui16_developer_patch picker width patch applied (diff: ' + diff + '; size: ' + size + ')');
+      }
     }
 
     function patchIcon(name, className, items, callback) {
@@ -489,6 +495,10 @@ else if (window == window.top) {
       // === enhance the picker width ===
       if (config.picker_width.active) {
 
+        // as we are dynamically resizing the header pickers we can remove the
+        // medium width restriction introduced in later versions of UI16
+        $('.navpage-pickers').removeClass('hidden-md');
+
         // set the picker width once the page has loaded
         setTimeout(function () {
           pickerWidthPatch();
@@ -510,10 +520,12 @@ else if (window == window.top) {
         });
 
         $('input#sysparm_search').focus(function () {
+          //$j('.navpage-header-content .user-name').hide();
           pickerWidthPatch(config.picker_width.max_search_width);
         });
         $('input#sysparm_search').blur(function () {
           setTimeout(function () {
+            //$j('.navpage-header-content .user-name').show();
             pickerWidthPatch();
           }, 500); // the length of time it takes for blur to occur
         });
