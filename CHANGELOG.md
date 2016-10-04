@@ -1,6 +1,10 @@
 # [UI16 Developer Patch](https://github.com/sn-developer/UI16-Developer-Patch)
 Useful patches for the ServiceNow UI16 interface. Find more at www.sndeveloper.com.
 
+### Version 2.1
+* Added AJAX impersonation check option (on by default).
+* Picker width patch runs extra times to counter extreme loading time.
+
 ### Version 2.0
 * Moved to an application.
 * Added application menu.

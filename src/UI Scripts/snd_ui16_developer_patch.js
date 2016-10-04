@@ -60,7 +60,8 @@ else if (window == window.top) {
       },
 
       profile_menu: {
-        active: "${snd_ui16dp.profile.menu.active}" == "true"
+        active: "${snd_ui16dp.profile.menu.active}" == "true",
+        check_impersonation: "${snd_ui16dp.profile.menu.check_impersonation}" == "true",
       }
 
     };
@@ -382,13 +383,35 @@ else if (window == window.top) {
     }
 
     function profileMenuPatch() {
-      var tmp;
-      // will only add unimpersonate link if impersonate link is found
-      tmp = $('#user_info_dropdown').next('ul').find('[sn-modal-show="impersonate"]');
-      if (tmp) {
-        tmp.parent().after('<li><a href="snd_ui16dp_unimpersonate.do"' +
-            ' target="gsft_main">Unimpersonate</a>');
+      var impersonate_item;
+
+      function addUnimpersonateItem() {
+        impersonate_item.parent().after('<li><a href="snd_ui16dp_unimpersonate.do"' +
+          ' target="gsft_main">Unimpersonate</a>');
         jslog('snd_ui16_developer_patch user menu patch applied.');
+      }
+
+      // will only add unimpersonate link if impersonate link is found
+      impersonate_item = $('#user_info_dropdown').next('ul').find('[sn-modal-show="impersonate"]');
+
+      if (impersonate_item) {
+        if (config.profile_menu.check_impersonation) {
+          $.ajax({
+            url: '/snd_ui16dp.do?action=getImpersonationDetails',
+            type: 'GET',
+            dataType: 'JSON'
+          }).done(function (data) {
+            if (data.result && data.result.is_impersonating) {
+              addUnimpersonateItem();
+            } else {
+              jslog('snd_ui16_developer_patch confirmed user is not impersonating.');
+            }
+          }).fail(function () {
+            jslog('snd_ui16_developer_patch failed to check impersonation details.');
+          });
+        } else {
+          addUnimpersonateItem();
+        }
       }
     }
 
@@ -410,6 +433,8 @@ else if (window == window.top) {
 
     function patch() {
 
+      var interval;
+
       // === run the navigator module opening mod ===
       if (config.navigator_context.active) {
         navigatorPatch();
@@ -421,6 +446,16 @@ else if (window == window.top) {
         // set the picker width once the page has loaded
         setTimeout(function () {
           pickerWidthPatch();
+
+          // use an interval to double check the picker width every second
+          // for the same load time specified by the user (double chance)
+          interval = setInterval(function () {
+            pickerWidthPatch();
+          }, 1000);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, config.picker_width.load_timeout + 1000);
+
         }, config.picker_width.load_timeout);
 
         // resizing the window will resize the pickers
