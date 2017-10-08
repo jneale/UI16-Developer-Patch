@@ -1,5 +1,22 @@
-# [UI16 Developer Patch](https://github.com/sn-developer/UI16-Developer-Patch)
-Useful patches for the ServiceNow UI16 interface. Find more at www.sndeveloper.com.
+# [UI16 Developer Patch](https://github.com/thewhitespace/UI16-Developer-Patch)
+Useful patches for the ServiceNow UI16 interface. Find more at www.thewhitespace.io.
+
+### Version 2.3
+* Renamed SND to [ws].
+* Jakarta: fix picker icon menus
+* Add 'Preferences' link link to Profile menu (admin only & disabled by default) to view user preferences.
+* Renamed 'View Sources' to 'Import' in Update Set context menu.
+* Add 'Stats' link to navigator context menu (admin only) to view stats.do.
+* Renamed 'Cache' link in navigator context menu to purge the cache.
+
+### Version 2.2
+* Istanbul: fix right click context menu for navigator modules.
+* Istanbul: Remove 'Edit module' pencil icon on modules when patch is applied (optional).
+* Add 'View Sources' link to Update Set context menu (admin only).
+* Add 'Open Studio' link to Application context menu.
+* Add new options to navigator context menu: Open in new window, Clear cache
+  (admin only) and System logs (admin only).
+* Rename 'Edit module' to 'Edit' in navigator context.
 
 ### Version 2.1
 * Added AJAX impersonation check option (on by default).

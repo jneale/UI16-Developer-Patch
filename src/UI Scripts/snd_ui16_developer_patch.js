@@ -2,7 +2,7 @@
   UI16 Developer Patch
   Configuration can be modified using system properties prefixed with 'snd_ui16dp'.
 
-  James Neale <james@sndeveloper.com>
+  James Neale <james@thewhitespace.io>
 */
 
 if (!window.top.hasOwnProperty('snd_ui16_developer_patch')) {
@@ -31,9 +31,20 @@ else if (window == window.top) {
 
     var config = {
 
+      // Patch the navigator
+      navigator: {
+
+        // Modify the width of the navigator
+        width: parseInt("${snd_ui16dp.navigator.width}", 10) || 285,
+      },
+
       // Patch the navigator right click context menu
       navigator_context: {
         active: "${snd_ui16dp.navigator.context.active}" == "true",
+
+        // Should the new Edit Pencil be hidden from menu items in Istanbul?
+        // Should only hide with this context menu patch active.
+        hide_pencil: "${snd_ui16dp.navigator.pencil.hide}" == "true"
       },
 
       // Patch the application and update set picker widths
@@ -44,7 +55,7 @@ else if (window == window.top) {
         max_width: parseInt("${snd_ui16dp.pickers.width.max}", 10) || 300,
 
         // Integer. Minimum width in pixels.
-        // 120 is the ServiceNow default, but we use 60 in case the window is 
+        // 120 is the ServiceNow default, but we use 60 in case the window is
         // small and the search bar is opened (otherwise it's unusable)
         min_width: parseInt("${snd_ui16dp.pickers.width.min}", 10) || 60,
 
@@ -64,6 +75,11 @@ else if (window == window.top) {
       profile_menu: {
         active: "${snd_ui16dp.profile.menu.active}" == "true",
         check_impersonation: "${snd_ui16dp.profile.menu.check_impersonation}" == "true",
+        link_preferences: "${snd_ui16dp.profile.menu.link_preferences}" == "true"
+      },
+
+      dev_studio: {
+        allow_multiple: "${sn_devstudio.allow.multi.app.development}" == "true"
       }
 
     };
@@ -149,6 +165,21 @@ else if (window == window.top) {
       };
     })();
 
+    // check if the letter of the build tag is valid H >= I = false
+    function minVersion(letter) {
+      var tag = '${glide.buildtag}';
+      var tag_word = tag.match(/glide-([^-]+)/);
+      var tag_letter = tag_word ? tag_word[1].toString()[0].toUpperCase() : '';
+      return letter <= tag_letter;
+    }
+
+    // add custom stylesheet to the page
+    function addStyle(css) {
+      $(document).ready(function() {
+        $('<style type="text/css">\n' + css + '\n</style>').appendTo(document.head);
+      });
+    }
+
     /**
       summary:
         Check if we are using UI16 by looking for the overview help element.
@@ -182,44 +213,110 @@ else if (window == window.top) {
     summary:
       Allow quick access to navigator records in Geneva
     description:
-      Holding a key and clicking mouse button 2 will open the
-      application or module record that was clicked.
+      Right clicking will open a context menu for the module.
       This saves going to applications or modules to find it.
     **/
-    function navigatorPatch() {
+    function navigatorMenuPatch() {
+      var items = [],
+          post_helsinki;
 
       if (!userHasRole('teamdev_configure_instance')) {
         return;
       }
 
-      createContextMenu('snd_ui16dp_navigator_module_menu', [
-        'Edit module'
-      ]);
+      items.push('Open in new window');
+      items.push('Edit');
 
+      if (userHasRole()) {
+        items.push('-');
+        items.push('Stats')
+        items.push('Cache');
+        items.push('System logs');
+      }
+
+      createContextMenu('snd_ui16dp_navigator_module_menu', items);
+
+      post_helsinki = minVersion('I');
+
+      // a[id] was introduced in Istanbul. This is backwards compatible to G and H UI16
       $('#gsft_nav').snd_ui16dp_menu({
           event: 'contextmenu',
-          selector: 'a[data-id]',
+          selector: 'a[data-id],a[id]', 
           menu_id: "#snd_ui16dp_navigator_module_menu",
           callback: function (invokedOn, selectedMenu) {
-            var id = invokedOn.attr('data-id'),
-                url = '/sys_app_module.do';
-            if (!id) {
-              jslog('No data id.');
-              return;
-            }
-            if (selectedMenu.text() == 'Edit module') {
-              if (invokedOn.hasClass('nav-app')) {
-                url = '/sys_app_application.do';
-              }
+            var target = invokedOn.closest('a'),
+                id = target.attr('data-id'),
+                url = '/sys_app_module.do',
+                text = selectedMenu.text();
 
-              jslog('snd_ui16_developer_patch opening navigation module');
-              openLink(url + '?sys_id=' + id);
-            } else {
-              jslog('Unknown item selected.');
+            if (!id) {
+              id = target.attr('id');
+              if (post_helsinki) {
+                if (!target.hasClass('app-node') && !target.hasClass('module-node')) {
+                  jslog('Not an app or module node.');
+                  return;
+                }
+              }
+              if (!id) {
+                jslog('No data id.');
+                return;
+              }
+            }
+
+            switch (text) {
+              case 'Edit':
+                if (target.hasClass('nav-app') || target.hasClass('app-node')) {
+                  url = '/sys_app_application.do';
+                }
+                jslog('snd_ui16_developer_patch opening navigation module');
+                openInFrame(url + '?sys_id=' + id);
+                break;
+              case 'Open in new window':
+                if (target.attr('href')) {
+                  window.open(target.attr('href'), id);
+                }
+                break;
+              case 'Stats':
+                window.open('/stats.do', 'stats');
+                break;
+              case 'Cache':
+                window.open('/cache.do', 'cache');
+                break;
+              case 'System logs':
+                window.open('/syslog_list.do', 'syslog');
+                break;
+              default:
+                jslog('Unknown item selected.');
             }
           }
       });
       jslog('snd_ui16_developer_patch navigator patch applied');
+    }
+
+    // hide the edit pencil which was added in Istanbul
+    function navigatorPencilPatch() {
+      var post_helsinki = minVersion('I');
+      if (post_helsinki) {
+
+        // hide the new pencil icon - we have edit via context menu
+        addStyle(
+          'div.sn-widget-list-action.nav-edit-module,' +
+          'a.sn-aside-btn.nav-edit-app {' +
+            'display: none !important;' +
+          '}'
+        );
+
+        // removing the pencil means we can shrink the navigator and give some
+        // more width to the main frame (-28px)
+        var width = config.navigator.width; // normally 285
+        if (width != 285) {
+          $('.navpage-nav').width(width);
+          $('#nav_west').width(width);
+          $('.navpage-main').css('left', width + 'px');
+        }
+
+        jslog('snd_ui16_developer_patch navigator pencil patch applied.');
+      }
     }
 
     /**
@@ -269,9 +366,10 @@ else if (window == window.top) {
 
     function patchIcon(name, className, items, callback) {
       var id = 'snd_ui16dp_' + name + '_menu',
+          post_istanbul = minVersion('J'),
           icon;
       createContextMenu(id, items);
-      icon = $('.' + className + ' span.label-icon');
+      icon = $('.' + className + ' ' + (post_istanbul ? 'a.btn-icon' : 'span.label-icon'));
       if (icon.length) {
         icon.snd_ui16dp_menu({
           menu_id: "#" + id,
@@ -292,7 +390,8 @@ else if (window == window.top) {
         This makes the icons clickable.
     **/
     function pickerIconPatch() {
-      var is_admin = userHasRole(),
+      var DevStudio = window.top.DevStudio,
+          is_admin = userHasRole(),
           domain_table = config.picker_icon.domain_table,
           callback,
           items;
@@ -305,8 +404,9 @@ else if (window == window.top) {
       items.push('View In Progress');
       if (is_admin) items.push('View Retrieved');
       items.push('-');
-      items.push('Refresh');
+      if (is_admin) items.push('Import');
       if (is_admin) items.push('Import from XML');
+      items.push('Refresh');
 
       callback = function (invokedOn, selectedMenu) {
         switch (selectedMenu.text()) {
@@ -314,20 +414,23 @@ else if (window == window.top) {
             var sys_id = $('#update_set_picker_select').val();
             if (sys_id) {
               sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-              openLink('/sys_update_set.do?sys_id=' + sys_id);
+              openInFrame('/sys_update_set.do?sys_id=' + sys_id);
             }
             break;
           case 'Create New':
-            openLink('/sys_update_set.do?sys_id=-1');
+            openInFrame('/sys_update_set.do?sys_id=-1');
             break;
           case 'View All':
-            openLink('sys_update_set_list.do');
+            openInFrame('sys_update_set_list.do');
             break;
           case 'View In Progress':
-            openLink('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
+            openInFrame('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
             break;
           case 'View Retrieved':
-            openLink('sys_remote_update_set_list.do');
+            openInFrame('sys_remote_update_set_list.do');
+            break;
+          case 'Import':
+            openInFrame('sys_update_set_source_list.do');
             break;
           case 'Import from XML':
             var url = 'upload.do';
@@ -335,7 +438,7 @@ else if (window == window.top) {
             url += 'sysparm_referring_url=sys_remote_update_set_list.do';
             url += '&';
             url += 'sysparm_target=sys_remote_update_set';
-            openLink(url);
+            openInFrame(url);
             break;
           case 'Refresh':
             refreshPickers();
@@ -348,6 +451,8 @@ else if (window == window.top) {
 
       // patch application picker icon
       items = [];
+      items.push('Open Studio');
+      items.push('-');
       items.push('View Current');
       items.push('Create New');
       items.push('-');
@@ -357,22 +462,43 @@ else if (window == window.top) {
       items.push('Refresh');
 
       callback = function (invokedOn, selectedMenu) {
+        var app_id = $('#application_picker_select').val();
+        app_id = app_id.split(':').pop(); // remove 'string:' prefix
+
+        var window_name = config.dev_studio.allow_multiple ? app_id : 'studio';
+
         switch (selectedMenu.text()) {
+          case 'Open Studio':
+            if (app_id) {
+              var url = '/$studio.do?sysparm_transaction_scope=' + app_id + '&sysparm_nostack=true';
+              if (!DevStudio || !DevStudio.isOpen(window_name) || DevStudio.navigatedAway(window_name)) {
+                win = window.open(url); // : window.open(url, window_name, features, false);
+              } else {
+                win = DevStudio.getWindow(window_name);
+                search = win.location.search;
+                if (search.indexOf('sysparm_transaction_scope=' + app_id) < 0) {
+                  win.location.replace(url);
+                }
+              }
+              win.focus();
+              if (DevStudio) {
+                DevStudio.addWindow(window_name, win);
+              }
+            }
+            break;
           case 'View Current':
-            var sys_id = $('#application_picker_select').val();
-            if (sys_id) {
-              sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-              openLink('/sys_scope.do?sys_id=' + sys_id);
+            if (app_id) {
+              openInFrame('/sys_scope.do?sys_id=' + app_id);
             }
             break;
           case 'Create New':
-            openLink('$sn_appcreator.do');
+            openInFrame('$sn_appcreator.do');
             break;
           case 'View All':
-            openLink('sys_scope_list.do');
+            openInFrame('sys_scope_list.do');
             break;
           case 'App Manager':
-            openLink('$myappsmgmt.do');
+            openInFrame('$myappsmgmt.do');
             break;
           case 'Refresh':
             refreshPickers();
@@ -403,18 +529,18 @@ else if (window == window.top) {
                 if (sys_id == 'global') {
                   alert('The global domain does not exist as a domain record.');
                 } else {
-                  openLink('/' + domain_table + '.do?sys_id=' + sys_id);
+                  openInFrame('/' + domain_table + '.do?sys_id=' + sys_id);
                 }
               }
               break;
             case 'Create New':
-              openLink(domain_table + '.do?sys_id=-1');
+              openInFrame(domain_table + '.do?sys_id=-1');
               break;
             case 'View All':
-              openLink(domain_table + '_list.do');
+              openInFrame(domain_table + '_list.do');
               break;
             case 'Domain Map':
-              openLink('domain_hierarchy.do?sysparm_stack=no&sysparm_attributes=record=domain,parent=parent,title=name,description=description,baseid=javascript:getPrimaryDomain();');
+              openInFrame('domain_hierarchy.do?sysparm_stack=no&sysparm_attributes=record=domain,parent=parent,title=name,description=description,baseid=javascript:getPrimaryDomain();');
               break;
             case 'Refresh':
               refreshPickers();
@@ -428,7 +554,8 @@ else if (window == window.top) {
     }
 
     function profileMenuPatch() {
-      var impersonate_item;
+      var user_dropdown = $('#user_info_dropdown').next('ul'),
+          impersonate_item;
 
       function addUnimpersonateItem() {
         impersonate_item.parent().after('<li><a href="snd_ui16dp_unimpersonate.do"' +
@@ -437,7 +564,7 @@ else if (window == window.top) {
       }
 
       // will only add unimpersonate link if impersonate link is found
-      impersonate_item = $('#user_info_dropdown').next('ul').find('[sn-modal-show="impersonate"]');
+      impersonate_item = user_dropdown.find('[sn-modal-show="impersonate"]');
 
       if (impersonate_item) {
         if (config.profile_menu.check_impersonation) {
@@ -458,9 +585,16 @@ else if (window == window.top) {
           addUnimpersonateItem();
         }
       }
+
+      // add link to user preferences if admin
+      if (config.profile_menu.link_preferences && userHasRole()) {
+        user_dropdown.children().first()
+            .after('<li><a href="/sys_user_preference_list.do?sysparm_query=user=' + top.NOW.user.userID + '" ' +
+                   'target="gsft_main">Preferences</a></li>');
+      }
     }
 
-    function openLink(target) {
+    function openInFrame(target) {
       jslog('snd_ui16_developer_patch opening target: ' + target);
       var frame = $('#gsft_main');
       if (frame.length) {
@@ -485,11 +619,16 @@ else if (window == window.top) {
 
     function patch() {
 
-      var interval;
+      var nav_interval,
+          picker_interval;
 
       // === run the navigator module opening mod ===
       if (config.navigator_context.active) {
-        navigatorPatch();
+        navigatorMenuPatch();
+
+        if (config.navigator_context.hide_pencil) {
+          navigatorPencilPatch();
+        }
       }
 
       // === enhance the picker width ===
@@ -505,11 +644,11 @@ else if (window == window.top) {
 
           // use an interval to double check the picker width every second
           // for the same load time specified by the user (double chance)
-          interval = setInterval(function () {
+          picker_interval = setInterval(function () {
             pickerWidthPatch();
           }, 1000);
           setTimeout(function () {
-            clearInterval(interval);
+            clearInterval(picker_interval);
           }, config.picker_width.load_timeout);
 
         }, config.picker_width.load_timeout);
