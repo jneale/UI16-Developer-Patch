@@ -198,20 +198,28 @@ else if (window == window.top) {
 
       $('#gsft_nav').snd_ui16dp_menu({
           event: 'contextmenu',
-          selector: 'a[data-id]',
+          selector: '.app-node, .module-node',
           menu_id: "#snd_ui16dp_navigator_module_menu",
           callback: function (invokedOn, selectedMenu) {
-            var id = invokedOn.attr('data-id'),
+            var id;
+            var url;
+            if(invokedOn.attr('data-id')){
+                id = invokedOn.attr('data-id');
+            } else {
+                id = invokedOn.closest('.app-node, .module-node').attr('data-id') || invokedOn.closest('.app-node, .module-node').attr('id');
+            }
+            var closest = invokedOn.closest('.app-node, .module-node');            
+            if (closest.hasClass('app-node')) {                
+                url = '/sys_app_application.do';
+            }
+            if (closest.hasClass('module-node')) {                
                 url = '/sys_app_module.do';
+            }
             if (!id) {
               jslog('No data id.');
               return;
             }
-            if (selectedMenu.text() == 'Edit module') {
-              if (invokedOn.hasClass('nav-app')) {
-                url = '/sys_app_application.do';
-              }
-
+            if (selectedMenu.text() == 'Edit module') {              
               jslog('snd_ui16_developer_patch opening navigation module');
               openLink(url + '?sys_id=' + id);
             } else {
