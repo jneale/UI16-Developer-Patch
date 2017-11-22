@@ -5,24 +5,44 @@
   James Neale <james@thewhitespace.io>
 */
 
-if (!window.top.hasOwnProperty('snd_ui16_developer_patch')) {
+if (!window.top.hasOwnProperty('snd_ui16_developer_patched')) {
   jslog('snd_ui16_developer_patch loading in top window.');
   (function (t) {
+    function fail(jqxhr, settings, e) {
+      if(jqxhr.readyState === 0){
+         jslog('snd_ui16_developer_patch unable to load script.');
+      } else {
+         // script loaded but failed to parse
+         jslog('snd_ui16_developer_patch script loading error: ' + e.toString());
+      }
+    }
+
     var i;
-    t.snd_ui16_developer_patch = null;
+
+    t.snd_ui16_developer_patched = null;
 
     // run an interval because depending on ServiceNow version, this script
     // can load before jQuery does.
     i = setInterval(function () {
-      if (typeof t.jQuery === 'function') {
-        t.jQuery.getScript('/snd_ui16_developer_patch.jsdbx');
+      var $ = t.jQuery;
+      if (typeof $ == 'function') {
         clearInterval(i);
+
+        $.when(
+            $.getScript('/snd_ui16_developer_patch_menus.jsdbx').fail(fail),
+            $.getScript('/snd_ui16_developer_patch.jsdbx').fail(fail),
+            $.Deferred(function (deferred){
+                $(deferred.resolve);
+            })
+        ).done(function(){
+          t.snd_ui16_developer_patch();
+        });
       }
     }, 500);
   })(window.top);
 }
 
-else if (window.top.snd_ui16_developer_patch != null) {
+else if (window.top.snd_ui16_developer_patched != null) {
   //jslog('snd_ui16_developer_patch already applied!');
 }
 
@@ -84,6 +104,12 @@ else if (window == window.top) {
 
     };
 
+    /**
+     * A jQuery menu plugin for running context menus
+     *
+     * @param  {Object} settings An object for configuring the menu.
+     * @return {Array} The jQuery array of elements being worked on.
+     */
     $.fn.snd_ui16dp_menu = (function () {
 
       var menus = {},
@@ -166,6 +192,13 @@ else if (window == window.top) {
     })();
 
     // check if the letter of the build tag is valid H >= I = false
+    /**
+     * Check if the letter of the build tag is valid. e.g. H >= I == false.
+     *
+     * @param  {String} letter The first letter of the version (e.g. K for Kingston)
+     * @return {Boolean}       Returns true if the system version is at least the
+     *                         version specified as being the minimum.
+     */
     function minVersion(letter) {
       var tag = '${glide.buildtag}';
       var tag_word = tag.match(/glide-([^-]+)/);
@@ -173,7 +206,11 @@ else if (window == window.top) {
       return letter <= tag_letter;
     }
 
-    // add custom stylesheet to the page
+    /**
+     * Add a custom stylesheet to the page.
+     *
+     * @param {String} css The CSS to inject.
+     */
     function addStyle(css) {
       $(document).ready(function() {
         $('<style type="text/css">\n' + css + '\n</style>').appendTo(document.head);
@@ -181,27 +218,40 @@ else if (window == window.top) {
     }
 
     /**
-      summary:
-        Check if we are using UI16 by looking for the overview help element.
-        Thanks to Tim Boelema for finding this element and sharing on community.
-    **/
+     * Check if we are using UI16 by looking for the overview help element.
+     * Thanks to Tim Boelema for finding this element and sharing on community.
+     *
+     * Works in Helsinki, Istanbul, Jakarta and Kingston EA
+     *
+     * @return {Boolean}
+     */
     function isUI16() {
       if (!window.top.angular) return false;
       var a = window.top.angular.element('overviewhelp').attr('page-name');
       return a == 'ui16' || a == 'helsinki';
     }
 
-    // create the context menus dynamically
+    /**
+     * Create the context menus dynamically
+     *
+     * @param  {String} id    The ID of the context menu.
+     * @param  {Array}  items An array of menu item objects - specifying at least a name.
+     * @return {undefined}
+     */
     function createContextMenu(id, items) {
-      var menu, i;
+      var menu, item, i;
       menu = '<ul id="' + id + '" class="dropdown-menu" role="menu" ' +
              'style="display: none; z-index: 999;">';
 
       for (i = 0; i < items.length; i++) {
-        if (items[i] === '-') {
+        item = items[i];
+        if (item.role && !userHasRole(item.role)) {
+          continue;
+        }
+        if (item.name === '-') {
           menu += '<li class="divider"></li>';
         } else {
-          menu += '<li><a href="#" tabindex="-1">' + items[i] + '</a></li>';
+          menu += '<li><a href="#" tabindex="-1">' + item.name + '</a></li>';
         }
       }
 
@@ -210,28 +260,90 @@ else if (window == window.top) {
     }
 
     /**
-    summary:
-      Allow quick access to navigator records in Geneva
-    description:
-      Right clicking will open a context menu for the module.
-      This saves going to applications or modules to find it.
-    **/
+     * Execute a menu item.
+     *
+     * @param  {Object} item The item to execute.
+     * @param  {Array}  args Optional. An array of arguments to pass to functions.
+     * @return {undefined}
+     */
+    function executeMenuItem(item, options) {
+      var target = item.target,
+          url = item.url,
+          fn = item.fn;
+
+      if (item.name == 'Refresh') {
+        refreshPickers();
+        return;
+      }
+      if (fn && typeof fn == 'function') {
+        fn.call(window, options, config);
+      }
+      if (url) {
+        if (typeof url == 'function') {
+          url = url.call(window, options, config);
+        }
+        url += '';
+        if (!url) {
+          jslog('No URL to open.');
+          return;
+        }
+        if (typeof target == 'function') {
+          target = target.call(window, options, config);
+        }
+        if (!target || target == 'gsft_main') {
+          openInFrame(url);
+        } else {
+          window.open(url, target);
+        }
+      }
+    }
+
+    /**
+     * Allow quick acces to navigator records. Right clicking a navigator module
+     * will open a context menu.
+     *
+     * @return {undefined}
+     */
     function navigatorMenuPatch() {
-      var items = [],
+      function callback(invokedOn, selectedMenu) {
+        var module = invokedOn.closest('a'),
+            id = module.attr('data-id'),
+            url = '/sys_app_module.do',
+            text = selectedMenu.text();
+
+        if (!id) {
+          id = module.attr('id');
+          if (post_helsinki) {
+            if (!module.hasClass('app-node') && !module.hasClass('module-node')) {
+              jslog('Not an app or module node.');
+              return;
+            }
+          }
+          if (!id) {
+            jslog('No data id.');
+            return;
+          }
+        }
+        module.$id = id;
+
+        var item, i;
+        for (i = 0; i < items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              module: module
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.navigator(),
           post_helsinki;
 
       if (!userHasRole('teamdev_configure_instance')) {
         return;
-      }
-
-      items.push('Open in new window');
-      items.push('Edit');
-
-      if (userHasRole()) {
-        items.push('-');
-        items.push('Stats')
-        items.push('Cache');
-        items.push('System logs');
       }
 
       createContextMenu('snd_ui16dp_navigator_module_menu', items);
@@ -241,59 +353,20 @@ else if (window == window.top) {
       // a[id] was introduced in Istanbul. This is backwards compatible to G and H UI16
       $('#gsft_nav').snd_ui16dp_menu({
           event: 'contextmenu',
-          selector: 'a[data-id],a[id]', 
+          selector: 'a[data-id],a[id]',
           menu_id: "#snd_ui16dp_navigator_module_menu",
-          callback: function (invokedOn, selectedMenu) {
-            var target = invokedOn.closest('a'),
-                id = target.attr('data-id'),
-                url = '/sys_app_module.do',
-                text = selectedMenu.text();
-
-            if (!id) {
-              id = target.attr('id');
-              if (post_helsinki) {
-                if (!target.hasClass('app-node') && !target.hasClass('module-node')) {
-                  jslog('Not an app or module node.');
-                  return;
-                }
-              }
-              if (!id) {
-                jslog('No data id.');
-                return;
-              }
-            }
-
-            switch (text) {
-              case 'Edit':
-                if (target.hasClass('nav-app') || target.hasClass('app-node')) {
-                  url = '/sys_app_application.do';
-                }
-                jslog('snd_ui16_developer_patch opening navigation module');
-                openInFrame(url + '?sys_id=' + id);
-                break;
-              case 'Open in new window':
-                if (target.attr('href')) {
-                  window.open(target.attr('href'), id);
-                }
-                break;
-              case 'Stats':
-                window.open('/stats.do', 'stats');
-                break;
-              case 'Cache':
-                window.open('/cache.do', 'cache');
-                break;
-              case 'System logs':
-                window.open('/syslog_list.do', 'syslog');
-                break;
-              default:
-                jslog('Unknown item selected.');
-            }
-          }
+          callback: callback
       });
       jslog('snd_ui16_developer_patch navigator patch applied');
     }
 
     // hide the edit pencil which was added in Istanbul
+    /**
+     * Hide the edit pencil which was added in Istanbul. We don't need it if we have
+     * the context menu - it just takes up space.
+     *
+     * @return {undefined}
+     */
     function navigatorPencilPatch() {
       var post_helsinki = minVersion('I');
       if (post_helsinki) {
@@ -320,13 +393,14 @@ else if (window == window.top) {
     }
 
     /**
-      summary:
-        Update the developer choice list widths to be a bit wider
-      description:
-        Gets the widths of various header elements and calculates
-        the remaining width available then divides it between the
-        pickers shown.
-    **/
+     * Update the developer choice list widths to be a bit wider.
+     * This gets the widths of various header elements and calculates the
+     * remaining width available before dividing it between the pickers shown.
+     *
+     * @param  {Integer} offset An offset to take into account when calculating
+     *                          the maximum width available.
+     * @return {undefined}
+     */
     function pickerWidthPatch(offset) {
       var max_w = config.picker_width.max_width,
           min_w = config.picker_width.min_width,
@@ -364,6 +438,15 @@ else if (window == window.top) {
       }
     }
 
+    /**
+     * Patch a picker icon so it becomes interactive and has a context menu.
+     *
+     * @param  {String}   name      The name of the context menu - forms the ID.
+     * @param  {String}   className The class name of the icon to patch.
+     * @param  {Array}    items     An array of item objects to generate the menu.
+     * @param  {Function} callback  The function to call when something is clicked.
+     * @return {undefined}
+     */
     function patchIcon(name, className, items, callback) {
       var id = 'snd_ui16dp_' + name + '_menu',
           post_istanbul = minVersion('J'),
@@ -381,178 +464,129 @@ else if (window == window.top) {
       }
     }
 
+
     /**
-      summary:
-        Make the update set and application icons clickable
-      description:
-        Geneva doesn't allow you to get to the update sets or applications
-        easily from the header because the icons are not links.
-        This makes the icons clickable.
-    **/
-    function pickerIconPatch() {
-      var DevStudio = window.top.DevStudio,
-          is_admin = userHasRole(),
-          domain_table = config.picker_icon.domain_table,
-          callback,
-          items;
-
-      items = [];
-      items.push('View Current');
-      items.push('Create New');
-      items.push('-');
-      items.push('View All');
-      items.push('View In Progress');
-      if (is_admin) items.push('View Retrieved');
-      items.push('-');
-      if (is_admin) items.push('Import');
-      if (is_admin) items.push('Import from XML');
-      items.push('Refresh');
-
-      callback = function (invokedOn, selectedMenu) {
-        switch (selectedMenu.text()) {
-          case 'View Current':
-            var sys_id = $('#update_set_picker_select').val();
-            if (sys_id) {
-              sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-              openInFrame('/sys_update_set.do?sys_id=' + sys_id);
-            }
-            break;
-          case 'Create New':
-            openInFrame('/sys_update_set.do?sys_id=-1');
-            break;
-          case 'View All':
-            openInFrame('sys_update_set_list.do');
-            break;
-          case 'View In Progress':
-            openInFrame('sys_update_set_list.do?sysparm_query=state%3Din%20progress');
-            break;
-          case 'View Retrieved':
-            openInFrame('sys_remote_update_set_list.do');
-            break;
-          case 'Import':
-            openInFrame('sys_update_set_source_list.do');
-            break;
-          case 'Import from XML':
-            var url = 'upload.do';
-            url += '?';
-            url += 'sysparm_referring_url=sys_remote_update_set_list.do';
-            url += '&';
-            url += 'sysparm_target=sys_remote_update_set';
-            openInFrame(url);
-            break;
-          case 'Refresh':
-            refreshPickers();
-            break;
-          default:
-            jslog('Unknown item selected.');
-        }
-      };
-      patchIcon('updateset', 'concourse-update-set-picker', items, callback);
-
-      // patch application picker icon
-      items = [];
-      items.push('Open Studio');
-      items.push('-');
-      items.push('View Current');
-      items.push('Create New');
-      items.push('-');
-      items.push('View All');
-      items.push('App Manager');
-      items.push('-');
-      items.push('Refresh');
-
-      callback = function (invokedOn, selectedMenu) {
-        var app_id = $('#application_picker_select').val();
-        app_id = app_id.split(':').pop(); // remove 'string:' prefix
-
-        var window_name = config.dev_studio.allow_multiple ? app_id : 'studio';
-
-        switch (selectedMenu.text()) {
-          case 'Open Studio':
-            if (app_id) {
-              var url = '/$studio.do?sysparm_transaction_scope=' + app_id + '&sysparm_nostack=true';
-              if (!DevStudio || !DevStudio.isOpen(window_name) || DevStudio.navigatedAway(window_name)) {
-                win = window.open(url); // : window.open(url, window_name, features, false);
-              } else {
-                win = DevStudio.getWindow(window_name);
-                search = win.location.search;
-                if (search.indexOf('sysparm_transaction_scope=' + app_id) < 0) {
-                  win.location.replace(url);
-                }
-              }
-              win.focus();
-              if (DevStudio) {
-                DevStudio.addWindow(window_name, win);
-              }
-            }
-            break;
-          case 'View Current':
-            if (app_id) {
-              openInFrame('/sys_scope.do?sys_id=' + app_id);
-            }
-            break;
-          case 'Create New':
-            openInFrame('$sn_appcreator.do');
-            break;
-          case 'View All':
-            openInFrame('sys_scope_list.do');
-            break;
-          case 'App Manager':
-            openInFrame('$myappsmgmt.do');
-            break;
-          case 'Refresh':
-            refreshPickers();
-            break;
-          default:
-            jslog('Unknown item selected.');
-        }
-      };
-      patchIcon('application', 'concourse-application-picker', items, callback);
-
-      // patch domain picker icon for domain admins only
-      if (userHasRole('domain_admin')) {
-        items = [];
-        items.push('View Current');
-        items.push('Create New');
-        items.push('-');
-        items.push('View All');
-        items.push('Domain Map');
-        items.push('-');
-        items.push('Refresh');
-
-        callback = function (invokedOn, selectedMenu) {
-          switch (selectedMenu.text()) {
-            case 'View Current':
-              var sys_id = $('#domain_picker_select').val();
-              if (sys_id) {
-                sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
-                if (sys_id == 'global') {
-                  alert('The global domain does not exist as a domain record.');
-                } else {
-                  openInFrame('/' + domain_table + '.do?sys_id=' + sys_id);
-                }
-              }
-              break;
-            case 'Create New':
-              openInFrame(domain_table + '.do?sys_id=-1');
-              break;
-            case 'View All':
-              openInFrame(domain_table + '_list.do');
-              break;
-            case 'Domain Map':
-              openInFrame('domain_hierarchy.do?sysparm_stack=no&sysparm_attributes=record=domain,parent=parent,title=name,description=description,baseid=javascript:getPrimaryDomain();');
-              break;
-            case 'Refresh':
-              refreshPickers();
-              break;
-            default:
-              jslog('Unknown item selected.');
+     * Patch the Update Set picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchUpdateSetPickerIcon() {
+      function callback(invokedOn, selectedMenu) {
+        var set_id = set_id = $('#update_set_picker_select').val(),
+            text = selectedMenu.text(),
+            item,
+            i;
+        for (i = 0; i < items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              set_id: set_id
+            });
+            return;
           }
-        };
-        patchIcon('domain', 'concourse-domain-picker', items, callback);
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.update_set();
+
+      patchIcon('updateset', 'concourse-update-set-picker', items, callback);
+    }
+
+    /**
+     * Patch the Application picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchAppPickerIcon() {
+
+      function getAppId() {
+        var app_id = $('#application_picker_select').val();
+        return app_id.split(':').pop(); // remove 'string:' prefix
+      }
+
+      function callback(invokedOn, selectedMenu) {
+        var app_id = getAppId(),
+            text = selectedMenu.text(),
+            item,
+            i;
+
+        for (i = 0; i < items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              app_id: app_id
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.application();
+
+      patchIcon('application', 'concourse-application-picker', items, callback);
+    }
+
+    /**
+     * Patch the Domain picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchDomainPickerIcon() {
+
+      function getDomainId() {
+        var sys_id = $('#domain_picker_select').val();
+        if (sys_id) {
+          sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+        }
+        return sys_id;
+      }
+
+      function callback(invokedOn, selectedMenu) {
+        var domain_id = getDomainId(),
+            text = selectedMenu.text(),
+            item,
+            i;
+        for (i = 0; i < items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              domain_table: domain_table,
+              domain_id: domain_id
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var domain_table = config.picker_icon.domain_table;
+      var items = snd_ui16_developer_patch_menus.domain();
+
+      patchIcon('domain', 'concourse-domain-picker', items, callback);
+    }
+
+    /**
+     * Make the all the developer picker icons (update set, application, domain)
+     * show a context menu when they are clicked.
+     *
+     * @return {undefined}
+     */
+    function pickerIconPatch() {
+      patchUpdateSetPickerIcon();
+      patchAppPickerIcon();
+      if (userHasRole('domain_admin')) {
+        patchDomainPickerIcon();
       }
     }
 
+    /**
+     * Patch the user profile menu by adding more items to it, most importantly
+     * the ability to unimpersonate.
+     *
+     * @return {undefined}
+     */
     function profileMenuPatch() {
       var user_dropdown = $('#user_info_dropdown').next('ul'),
           impersonate_item;
@@ -594,6 +628,12 @@ else if (window == window.top) {
       }
     }
 
+    /**
+     * Open a url in the main frame.
+     *
+     * @param  {String} target The target URL to load.
+     * @return {undefined}
+     */
     function openInFrame(target) {
       jslog('snd_ui16_developer_patch opening target: ' + target);
       var frame = $('#gsft_main');
@@ -604,6 +644,13 @@ else if (window == window.top) {
       }
     }
 
+    /**
+     * Refresh all the developer pickers (Update Set, Application, Domain).
+     * This is really handy when you want to be sure you are working in the
+     * correct place.
+     *
+     * @return {undefined}
+     */
     function refreshPickers() {
       var injector = angular.element('body').injector();
       try {
@@ -617,6 +664,26 @@ else if (window == window.top) {
       } catch (e) {}
     }
 
+    /**
+     * Check if the user has a give role. Will always return true for admin.
+     *
+     * @param  {String} role The role to check.
+     * @return {Boolean}
+     */
+    function userHasRole(role) {
+      var roles = (',' + window.NOW.user.roles + ','),
+          is_admin = roles.indexOf(',admin,') > -1;
+      if (role) {
+        return is_admin || roles.indexOf(',' + role + ',') > -1;
+      }
+      return is_admin;
+    }
+
+    /**
+     * The main patch function that executes everything.
+     *
+     * @return {undefined}
+     */
     function patch() {
 
       var nav_interval,
@@ -681,29 +748,24 @@ else if (window == window.top) {
       }
     }
 
-    function userHasRole(role) {
-      var roles = (',' + window.NOW.user.roles + ','),
-          is_admin = roles.indexOf(',admin,') > -1;
-      if (roles) {
-        return is_admin || roles.indexOf(',' + role + ',') > -1;
-      }
-      return is_admin;
-    }
-
-    $(document).ready(function () {
+    window.top.snd_ui16_developer_patch = function () {
       try {
+        if (window.top.snd_ui16_developer_patched != null) {
+          jslog('snd_ui16_developer_patch already applied.');
+          return;
+        }
         if (!isUI16()) {
-          window.snd_ui16_developer_patch = false;
+          window.top.snd_ui16_developer_patched = false;
           jslog('snd_ui16_developer_patch ignored. Not UI16.');
         } else {
           jslog('Running snd_ui16_developer_patch...');
           patch();
-          window.snd_ui16_developer_patch = true;
+          window.top.snd_ui16_developer_patched = true;
         }
       } catch (e) {
-        jslog('SND Developer Patch UI16 mod failure: ' + e);
+        jslog('[ws] UI16 Developer Patch mod failure: ' + e);
       }
-    });
+    };
 
   })(jQuery, window);
 }

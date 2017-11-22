@@ -1,6 +1,11 @@
 # [UI16 Developer Patch](https://github.com/thewhitespace/UI16-Developer-Patch)
 Useful patches for the ServiceNow UI16 interface. Find more at www.thewhitespace.io.
 
+### Version 2.4
+* Full menu restructure to make it easier to customise the menu items by using a separate UI Script.
+* Kingston EA tested.
+* Added new default items to Navigator menu: Events, Properties, Preferences
+
 ### Version 2.3
 * Renamed SND to [ws].
 * Jakarta: fix picker icon menus
