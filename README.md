@@ -98,7 +98,7 @@ A menu item is an object:
 {
   // Required. The name of the menu item, i.e. what you click on.
   name: "My view",
-    
+
   // Optional. Do anything you like in the client using this function.
   fn: function (options) {
     alert('Hey!');
@@ -106,12 +106,12 @@ A menu item is an object:
 
   // Optional. Restrict to a specific role (just in case).
   role: 'admin',
-  
-  // Specify the target window to open the url in. Optional. Default 'gsft_main'.
+
+  // Optional. Specify the target window to open the url in. Optional. Default 'gsft_main'.
   target: '_blank',
-  
-  // The url you want to open.
-  url: '/incident_list.do' 
+
+  // Optional. The url you want to open.
+  url: '/incident_list.do'
 }
 ```
 
@@ -119,14 +119,17 @@ The *target* and *url* properties can also be functions. Each menu type passes i
 
 ```javascript
 {
-  	name: 'My list',
-    target: function (options) {
-      	return options.el.id;
-    },
-    url: function (options) {
-      	return '/list.do?id=' + options.el.id;
+  name: 'Open in new window',
+  target: function (options) {
+    return options.module.$id;
+  },
+  url: function (options) {
+    if (options.module.hasClass('nav-app') || options.module.hasClass('app-node')) {
+      return '';
     }
-}
+    return options.module.attr('href');
+  }
+}}
 ```
 
 All functions are passed two parameters: *options* and *config*.
