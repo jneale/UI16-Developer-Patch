@@ -1,6 +1,6 @@
 # UI16 Developer Patch
 
-[**Get the Update Set.**](https://share.servicenow.com/app.do#/search-result?search_query=sndeveloper&startRow=NaN&sort_parameter=title)
+[**Download v2.4 from Share**](https://share.servicenow.com/app.do#/detailV2/364d4596db228b00c4f256594b961961/details)
 
 *UI16 Developer Patch* is an addon for ServiceNow that enhances the UI16
 interface to add some features that were taken away in the upgrade to UI16 or
@@ -140,31 +140,47 @@ The *config* object contains the system properties for you system.
 
 ### Config Properties
 
-__*config.navigator.width*__ Modify the width of the navigator in pixels. Default 285.
+These are the properties available in the *config* object passed as the second
+parameter into all menu item functions.
 
-__*config.navigator_context.active*__ Allow the navigator to be patched. Default true.
+*config.navigator.width*
+Modify the width of the navigator in pixels. Default 285.
 
-__*config.navigator_context.hide_pencil*__ Hide the pencil icon from later versions of UI16 (use Edit in context menu instead).
+*config.navigator_context.active*
+Allow the navigator to be patched. Default true.
 
-__*config.picker_width.active*__ Allow the pickers to be patched. Default true.
+*config.navigator_context.hide_pencil*
+Hide the pencil icon from later versions of UI16 (use Edit in context menu instead).
 
-__*config.picker_width.max_width*__ Set the maximum width in pixels of the pickers. Default 300.
+*config.picker_width.active*
+Allow the pickers to be patched. Default true.
 
-__*config.picker_width.min_width*__ Set the minimum width in pixels of the pickers. Default 60.
+*config.picker_width.max_width*
+Set the maximum width in pixels of the pickers. Default 300.
 
-__*config.picker_width.load_timeout*__ The time in ms to wait so that everything can load. Default 2000.
+*config.picker_width.min_width*
+Set the minimum width in pixels of the pickers. Default 60.
 
-__*config.picker_width.max_search_width*__ The width of the header search box when it has focus. Default 150.
+*config.picker_width.load_timeout*
+The time in ms to wait so that everything can load. Default 2000.
 
-__*config.picker_icon.active*__ Allow the picker icons to be patched. Default true.
+*config.picker_width.max_search_width*
+The width of the header search box when it has focus. Default 150.
 
-__*config.picker_icon.domain_table*__ The name of table being used to manage domains.
+*config.picker_icon.active*
+Allow the picker icons to be patched. Default true.
 
-__*config.profile_menu.active*__ Allow the profile menu to be patched. Default true.
+*config.picker_icon.domain_table*
+The name of table being used to manage domains.
 
-__*config.profile_menu.check_impersonation*__ Check if the user is being impersonated so the Unimpersonate menu item can be added. This performs an AJAX query.
+*config.profile_menu.active*
+Allow the profile menu to be patched. Default true.
 
-__*config.profile_menu.link_preferences*__ Show a link to the user's preferences on the User Profile menu.
+*config.profile_menu.check_impersonation*
+Check if the user is being impersonated so the Unimpersonate menu item can be added. This performs an AJAX query.
+
+*config.profile_menu.link_preferences*
+Show a link to the user's preferences on the User Profile menu.
 
 ## General
 
