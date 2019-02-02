@@ -420,7 +420,7 @@ else if (window == window.top) {
       pickers.css('width', ''); // reset so we recalculate
 
       nav_w = $('header.navpage-header').width();
-      logo_w = $('div.navbar-header').outerWidth();
+      logo_w = $('a.navbar-brand').outerWidth() + $('span.banner-text').outerWidth();
       float_w = $('div.navbar-right').outerWidth();
 
       diff = nav_w - logo_w - float_w - (offset || 0);
