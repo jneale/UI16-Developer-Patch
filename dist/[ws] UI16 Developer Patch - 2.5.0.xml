@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2019-02-19 21:55:28">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Enhance the UI16 experience</description>
+<inserted/>
+<name>[ws] UI16 Developer Patch - 2.5.0</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>3168f468db372bc0957ddd3b5e9619ea</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>ac88f468db372bc0957ddd3b5e9619b6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_7f1a7a500f126a00c55a09ece1050e94</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the profile menu for unimpersonate option.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.profile.menu.active</name><read_roles/><suffix>snd_ui16dp.profile.menu.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:24:28</sys_created_on><sys_id>7f1a7a500f126a00c55a09ece1050e94</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.profile.menu.active</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_7f1a7a500f126a00c55a09ece1050e94</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:26:22</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7f1a7a500f126a00c55a09ece1050e94"/></record_update>]]></payload>
+<payload_hash>-1625073854</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2088f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149d90000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>70aa05a8722023001ba537869ef05f78</update_guid>
+<update_guid_history>70aa05a8722023001ba537869ef05f78:1012847562,42d2878d697823003778c510a64c3ef2:937865067,42d2878d697823003778c510a64c3ef2:937865067,1e9da2095c3823002c915caf66fabec1:1090506417</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ffddb47bdba14340c73ad12c5e9619f0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the profile menu with a link to user preferences (admin only).</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.profile.menu.link_preferences</name><read_roles/><suffix>snd_ui16dp.profile.menu.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@thewhitespace.io</sys_created_by><sys_created_on>2017-10-08 11:55:34</sys_created_on><sys_id>ffddb47bdba14340c73ad12c5e9619f0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.profile.menu.link_preferences</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_ffddb47bdba14340c73ad12c5e9619f0</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:55:34</sys_updated_on><type>boolean</type><value>false</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ffddb47bdba14340c73ad12c5e9619f0"/></record_update>]]></payload>
+<payload_hash>991271114</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2088f468db372bc0957ddd3b5e9619bc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14ac60000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.link_preferences</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a84a202300f499a103cba0e1a0</update_guid>
+<update_guid_history>78aa05a84a202300f499a103cba0e1a0:2084445570,42134f8d357823009e9db215bb2f922b:2084445570</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_3d27f1980f9e2a00c55a09ece1050e55</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the application and update set picker icons</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.icon.active</name><read_roles/><suffix>snd_ui16dp.pickers.icon.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:32:08</sys_created_on><sys_id>3d27f1980f9e2a00c55a09ece1050e55</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.icon.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_3d27f1980f9e2a00c55a09ece1050e55</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:21:05</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=3d27f1980f9e2a00c55a09ece1050e55"/></record_update>]]></payload>
+<payload_hash>-1006877126</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2488f468db372bc0957ddd3b5e9619b8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149230000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.icon.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a86b2023003294d19686b2df57</update_guid>
+<update_guid_history>78aa05a86b2023003294d19686b2df57:-1070868286,bcd2878d91782300c40a972d7d3ce338:-1205751541,bcd2878d91782300c40a972d7d3ce338:-1205751541,d69da209e9382300f9a1d04b83461fb9:1300384441</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_fad97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>1000</order><property display_value="snd_ui16dp.pickers.width.max" name="snd_ui16dp.pickers.width.max">c27379180f9e2a00c55a09ece1050e85</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_id>fad97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>5</sys_mod_count><sys_name>snd_ui16dp.pickers.width.max.[ws] UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_fad97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:25</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>-1245255157</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2488f468db372bc0957ddd3b5e9619bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a950000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.max.[ws] UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>b8aa05a89220230051d9700421402197</update_guid>
+<update_guid_history>b8aa05a89220230051d9700421402197:-1942837805,92d2c78d097823005d8d6ef24cad1316:1862790020,92d2c78d097823005d8d6ef24cad1316:1862790020,d69da209823823000f49bce2fad2c2d5:824563672</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_99e443180f126a00c55a09ece1050ec7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>300</order><property display_value="snd_ui16dp.profile.menu.active" name="snd_ui16dp.profile.menu.active">7f1a7a500f126a00c55a09ece1050e94</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 15:11:33</sys_created_on><sys_id>99e443180f126a00c55a09ece1050ec7</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.profile.menu.active.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_99e443180f126a00c55a09ece1050ec7</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:49:45</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>381845002</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2888f468db372bc0957ddd3b5e9619ba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149fb0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>7caa05a8f220230030b300e01c177b91</update_guid>
+<update_guid_history>7caa05a8f220230030b300e01c177b91:451077266,71d2878df8782300c66e1d5f45713cee:-1294055028,71d2878df8782300c66e1d5f45713cee:-1294055028,5a9da20918382300356365cfdc9658ce:-134952934</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_3ad97a500f126a00c55a09ece1050e8d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>100</order><property display_value="snd_ui16dp.navigator.context.active" name="snd_ui16dp.navigator.context.active">7a567d580f9e2a00c55a09ece1050e9a</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_id>3ad97a500f126a00c55a09ece1050e8d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.navigator.context.active.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_3ad97a500f126a00c55a09ece1050e8d</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:23:19</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>311373055</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>2c88f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149120000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.context.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>f0aa05a8df202300f6bbb16bef44547f</update_guid>
+<update_guid_history>f0aa05a8df202300f6bbb16bef44547f:-1521047097,a1d2878d7f782300cf91acabe8b5a5ad:93770023,a1d2878d7f782300cf91acabe8b5a5ad:93770023,da9da209ab382300378e99c91c0597c9:-871596221</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_processor_34752bf00f1a6a00c55a09ece1050e8a</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_processor"&gt;&lt;sys_processor action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;description/&gt;&lt;interactive&gt;false&lt;/interactive&gt;&lt;name&gt;snd_ui16dp&lt;/name&gt;&lt;parameters/&gt;&lt;params_endpoint/&gt;&lt;path&gt;snd_ui16dp&lt;/path&gt;&lt;path_endpoint/&gt;&lt;require_csrf&gt;false&lt;/require_csrf&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function process(g_request, g_response, g_processor) {
+
+  var json = new global.JSON();
+
+  // Makes the parameters passed to the request easily available
+  var params = (function () {
+    var names = g_request.getParameterNames(),
+        params = {},
+        name,
+        i;
+
+    while (names.hasMoreElements()) {
+      name = names.nextElement();
+      params[name] = '' + g_request.getParameter(name);
+    }
+    if (params.data) {
+      params.data = json.decode(params.data);
+    }
+    return params;
+  })();
+
+  var actions = {};
+
+  actions.getImpersonationDetails = function () {
+    var result = {};
+    result.user_name = gs.getImpersonatingUserName();
+    result.is_impersonating = result.user_name !== null;
+    return result;
+  };
+
+  /**
+    summary:
+      A simple request handler that takes an action and data object.
+    param: action [String]
+      A keyword that can be used to determine the request.
+    param: data [mixed]
+      Arbitrary data object for use with processing.
+  **/
+  function processAction(params) {
+    var start_time = new Date().getTime(),
+        action_name = params.action,
+        ret = {$success: true},
+        errors;
+
+    try {
+      if (!action_name) {
+        ret.$success = false;
+        ret.$error = 'Invalid action.';
+      } else if (action_name in actions) {
+          ret.result = actions[action_name](params);
+          if (ret.result === undefined) {
+            ret.$success = false;
+            ret.$error = 'Action returned undefined.';
+          }
+      } else {
+        ret.$success = false;
+        ret.$error = 'Invalid action name: \'' + action_name + '\'';
+      }
+
+      errors = snd_console.get ? snd_console.get({type: 'error'}) : [];
+      if (errors.length) {
+        ret.$success = false;
+        ret.$error = errors.pop();
+      }
+
+    } catch (ex) {
+      ret.$success = false;
+      ret.$error = 'Exception occured. ' + ex.name + ': ' + ex.message;
+      if (ex.lineNumber) ret.$error += ' on line ' + ex.lineNumber;
+    }
+
+    ret.$time = (new Date().getTime()) - start_time;
+
+    if ('debug_mode' in params &amp;&amp; snd_console.getStrings) {
+      ret.$snd_console = snd_console.getStrings();
+    }
+
+    return ret;
+  }
+
+  // process the action that has been requested by the browser
+  g_processor.writeOutput('application/json', json.encode(processAction(params)));
+
+})(g_request, g_response, g_processor);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_processor&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@sndeveloper.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2016-10-04 07:09:22&lt;/sys_created_on&gt;&lt;sys_id&gt;34752bf00f1a6a00c55a09ece1050e8a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16dp&lt;/sys_name&gt;&lt;sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[ws] UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_processor_34752bf00f1a6a00c55a09ece1050e8a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@sndeveloper.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2016-10-04 07:09:22&lt;/sys_updated_on&gt;&lt;type&gt;script&lt;/type&gt;&lt;/sys_processor&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-14044882</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6088f468db372bc0957ddd3b5e9619b8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c148fc0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp</target_name>
+<type>Processor</type>
+<update_domain>global</update_domain>
+<update_guid>b0aa05a8fa2023004da073b673041955</update_guid>
+<update_guid_history>b0aa05a8fa2023004da073b673041955:-1709440538,28d2878d807823009b119195db17b12e:184909579,28d2878d807823009b119195db17b12e:184909579,d29da209ce38230045514cb2581207b6:-1901455035</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_f6d97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>800</order><property display_value="snd_ui16dp.pickers.timeout" name="snd_ui16dp.pickers.timeout">ddf671980f9e2a00c55a09ece1050ea8</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_id>f6d97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>4</sys_mod_count><sys_name>snd_ui16dp.pickers.timeout.[ws] UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_f6d97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:25</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>-1882268768</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6088f468db372bc0957ddd3b5e9619bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a860000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.timeout.[ws] UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>34aa05a82e20230054fd3c3e67a3e996</update_guid>
+<update_guid_history>34aa05a82e20230054fd3c3e67a3e996:-1387170392,bed2c78d077823009e454067b837e964:1802622152,bed2c78d077823009e454067b837e964:1802622152,5e9da209ed382300bd82fd5ba22926d3:2071381198</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_8eb377f40f1a6a00c55a09ece1050ecf</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>600</order><property display_value="snd_ui16dp.profile.menu.check_impersonation" name="snd_ui16dp.profile.menu.check_impersonation">c803b3f40f1a6a00c55a09ece1050e63</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-04 07:53:05</sys_created_on><sys_id>8eb377f40f1a6a00c55a09ece1050ecf</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.profile.menu.check_impersonation.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_8eb377f40f1a6a00c55a09ece1050ecf</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:49:45</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>30468042</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6488f468db372bc0957ddd3b5e9619ba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149ed0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.check_impersonation.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>f4aa05a8dd2023002cd9a172a3950890</update_guid>
+<update_guid_history>f4aa05a8dd2023002cd9a172a3950890:94928466,a2d2c78d76782300d30b035d4e3b1d32:-688327076,a2d2c78d76782300d30b035d4e3b1d32:-688327076,de9da209fb382300f752920653facbcc:532729944</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_c125b5580f9e2a00c55a09ece1050e59</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category"><sys_properties_category action="INSERT_OR_UPDATE"><name>[ws] UI16 Developer Patch</name><sys_class_name>sys_properties_category</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:23:49</sys_created_on><sys_id>c125b5580f9e2a00c55a09ece1050e59</sys_id><sys_mod_count>3</sys_mod_count><sys_name>[ws] UI16 Developer Patch</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_c125b5580f9e2a00c55a09ece1050e59</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:04</sys_updated_on><title/></sys_properties_category><sys_translated_text action="delete_multiple" query="documentkey=c125b5580f9e2a00c55a09ece1050e59"/></record_update>]]></payload>
+<payload_hash>-275049939</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6888f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a070000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>[ws] UI16 Developer Patch</target_name>
+<type>System Property Category</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a83c2023003fa0ab22ea8b877d</update_guid>
+<update_guid_history>78aa05a83c2023003fa0ab22ea8b877d:1889891189,36d2c78d36782300cef8d8643656489b:1485680610,36d2c78d36782300cef8d8643656489b:1485680610,129da2093a38230066e263d018f752c8:-407590168</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_646becd2dbe68300b1307b5b8c9619e3</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description&gt;Menu configurations for UI16 Developer Patch&lt;/description&gt;&lt;global&gt;false&lt;/global&gt;&lt;name&gt;snd_ui16_developer_patch_menus&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/**
+ * A list of functions that return arrays of menu items.
+ *
+ * Return menu item arrays have menu items that look like this:
+ *   {
+ *     name   {String}          The label shown to the user.
+ *     fn     {Function}        Optional. A function to do whatever you like.
+ *     target {Function|String} The name of the target window.
+ *                              A function must return a string.
+ *     url    {Function|String} The address to load in the target window.
+ *                              A function must return a string.
+ *   }
+ *
+ * All functions are passed in two arguments:
+ *   options {Object} An array of options relevent to the menu. See localised
+ *                    menu comments for what options are available.
+ *   config  {Object} The configuration object containing system properties.
+ *
+ * @return {Array}
+ */
+var snd_ui16_developer_patch_menus = {
+
+  /**
+   * Menu items for the navigator module context menu.
+   *
+   * Function options:
+   *   module  The selected module element.
+   *
+   * @return {Array}
+   */
+  navigator: function () {
+    return [
+      {
+        name: 'Open in new window',
+        target: function (options) {
+          return options.module.$id;
+        },
+        url: function (options) {
+          if (options.module.hasClass('nav-app') || options.module.hasClass('app-node')) {
+            return '';
+          }
+          return options.module.attr('href');
+        }
+      },
+      {
+        name: 'Edit',
+        role: 'admin',
+        url: function (options) {
+          var url = '/sys_app_module.do';
+          if (options.module.hasClass('nav-app') || options.module.hasClass('app-node')) {
+            url = '/sys_app_application.do';
+          }
+          jslog('snd_ui16_developer_patch opening navigation module');
+          return url + '?sys_id=' + options.module.$id;
+        }
+      },
+      {
+        name: '-',
+        role: 'admin'
+      },
+      {
+        name: 'Events',
+        role: 'admin',
+        target: 'events',
+        url: '/sysevent_list.do?sysparm_query=sys_created_onONToday%40javascript%3Ags.daysAgoStart(0)%40javascript%3Ags.daysAgoEnd(0)'
+      },
+      {
+        name: 'Properties',
+        role: 'admin',
+        target: 'properties',
+        url: '/sys_properties_list.do'
+      },
+      {
+        name: 'Preferences',
+        role: 'admin',
+        target: 'preferences',
+        url: '/sys_user_preference_list.do'
+      },
+      {
+        name: 'Logs',
+        role: 'admin',
+        target: 'syslog',
+        url: '/syslog_list.do'
+      },
+      {
+        name: '-',
+        role: 'admin'
+      },
+      {
+        name: 'Cache',
+        role: 'admin',
+        target: 'cache',
+        url: '/cache.do'
+      },
+      {
+        name: 'Stats',
+        role: 'admin',
+        target: 'stats',
+        url: '/stats.do'
+      }
+    ];
+  },
+
+  /**
+   * Menu items for the update set picker icon context menu.
+   *
+   * Function options:
+   *   set_id  The sys_id of the selected update set.
+   *
+   * @return {Array}
+   */
+  update_set: function () {
+    return [
+     {
+        name: 'View Current',
+        url: function (options) {
+          if (options.set_id) {
+            options.set_id = options.set_id.split(':').pop(); // remove 'string:' prefix
+            return '/sys_update_set.do?sys_id=' + options.set_id;
+          }
+        }
+      },
+      {
+        name: 'Create New',
+        url: '/sys_update_set.do?sys_id=-1'
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'View All',
+        url: 'sys_update_set_list.do'
+      },
+      {
+        name: 'View In Progress',
+        url: 'sys_update_set_list.do?sysparm_query=state%3Din%20progress'
+      },
+      {
+        name: 'View Retrieved',
+        role: 'admin',
+        url: 'sys_remote_update_set_list.do'
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'Import from Remote',
+        role: 'admin',
+        url: 'sys_update_set_source_list.do'
+      },
+      {
+        name: 'Import from XML',
+        role: 'admin',
+        url: 'upload.do' +
+             '?' +
+             'sysparm_referring_url=sys_remote_update_set_list.do' +
+             '&amp;' +
+             'sysparm_target=sys_remote_update_set'
+      },
+      {
+        name: '-',
+        role: 'admin'
+      },
+      {
+        name: 'Refresh'
+      }
+    ];
+  },
+
+  /**
+   * Menu items for the application picker icon context menu.
+   *
+   * Function options:
+   *   app_id  The sys_id of the selected application.
+   *
+   * @return {Array}
+   */
+  application: function () {
+    return [
+      {
+        name: 'Open Studio',
+        fn: function (options, config) {
+          var DevStudio = window.top.DevStudio,
+              window_name,
+              url;
+
+          if (options.app_id) {
+            window_name = config.dev_studio.allow_multiple ? options.app_id : 'studio';
+            url = '/$studio.do?sysparm_transaction_scope=' + options.app_id + '&amp;sysparm_nostack=true';
+
+            if (!DevStudio || !DevStudio.isOpen(window_name) || DevStudio.navigatedAway(window_name)) {
+              win = window.open(url); // : window.open(url, window_name, features, false);
+            } else {
+              win = DevStudio.getWindow(window_name);
+              search = win.location.search;
+              if (search.indexOf('sysparm_transaction_scope=' + options.app_id) &lt; 0) {
+                win.location.replace(url);
+              }
+            }
+            win.focus();
+            if (DevStudio) {
+              DevStudio.addWindow(window_name, win);
+            }
+          }
+        }
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'View Current',
+        url: function (options) {
+          if (options.app_id) {
+            return '/sys_scope.do?sys_id=' + options.app_id;
+          }
+        }
+      },
+      {
+        name: 'Create New',
+        url: '$sn_appcreator.do'
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'View All',
+        url: 'sys_scope_list.do'
+      },
+      {
+        name: 'App Manager',
+        url: '$myappsmgmt.do'
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'Refresh'
+      }
+    ];
+  },
+
+  /**
+   * Menu items for the domain picker icon context menu.
+   *
+   * Function options:
+   *   domain_id    The sys_id of the selected domain.
+   *   domain_table The name of the configured domain table.
+   *
+   * @return {Array}
+   */
+  domain: function () {
+    return [
+      {
+        name: 'View Current',
+        url: function (options) {
+          if (options.domain_id == 'global') {
+            alert('The global domain does not exist as a domain record.');
+          } else {
+            return '/' + options.domain_table + '.do?sys_id=' + options.domain_id;
+          }
+        }
+      },
+      {
+        name: 'Create New',
+        url: function (options) {
+          return options.domain_table + '.do?sys_id=-1';
+        }
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'View All',
+        url: function (options) {
+          return options.domain_table + '_list.do';
+        }
+      },
+      {
+        name: 'Domain Map',
+        url: 'domain_hierarchy.do?sysparm_stack=no&amp;' +
+             'sysparm_attributes=record=domain,parent=parent,title=name,description=description,baseid=javascript:getPrimaryDomain();'
+      },
+      {
+        name: '-'
+      },
+      {
+        name: 'Refresh'
+      }
+    ];
+  }
+};]]&gt;&lt;/script&gt;&lt;script_name/&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@thewhitespace.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-11-22 11:47:19&lt;/sys_created_on&gt;&lt;sys_id&gt;646becd2dbe68300b1307b5b8c9619e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16_developer_patch_menus&lt;/sys_name&gt;&lt;sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[ws] UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_646becd2dbe68300b1307b5b8c9619e3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@thewhitespace.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-11-22 14:03:28&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1992123932</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6888f468db372bc0957ddd3b5e9619bc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c1499a0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16_developer_patch_menus</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_guid>0daa05a8ca202300a0d0095df654f3a6</update_guid>
+<update_guid_history>0daa05a8ca202300a0d0095df654f3a6:2022470756,ce134f8d6a782300e1cee71d5d63074a:2022470756</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_7a567d580f9e2a00c55a09ece1050e9a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the navigator right click context menu.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.navigator.context.active</name><read_roles/><suffix>snd_ui16dp.navigator.context.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:28:49</sys_created_on><sys_id>7a567d580f9e2a00c55a09ece1050e9a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.navigator.context.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_7a567d580f9e2a00c55a09ece1050e9a</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:19:39</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=7a567d580f9e2a00c55a09ece1050e9a"/></record_update>]]></payload>
+<payload_hash>931948909</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6c88f468db372bc0957ddd3b5e9619b8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149b80000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.context.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>70aa05a8fe2023001309cbb758b12c76</update_guid>
+<update_guid_history>70aa05a8fe2023001309cbb758b12c76:-1422870603,71d2878da378230051bdaeae06a670b1:467758304,71d2878da378230051bdaeae06a670b1:467758304,9a9da2095538230094042f4cc449d8bf:-373538458</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ded7f5980f9e2a00c55a09ece1050e66</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Patch the application and update set picker widths.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.active</name><read_roles/><suffix>snd_ui16dp.pickers.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:35:13</sys_created_on><sys_id>ded7f5980f9e2a00c55a09ece1050e66</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.pickers.active</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_ded7f5980f9e2a00c55a09ece1050e66</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-02 14:20:36</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ded7f5980f9e2a00c55a09ece1050e66"/></record_update>]]></payload>
+<payload_hash>2121487084</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>6c88f468db372bc0957ddd3b5e9619bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a6b0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.active</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>f0aa05a8a120230052add97495c3b99e</update_guid>
+<update_guid_history>f0aa05a8a120230052add97495c3b99e:1275407348,63d20b8d0e782300ab5e239e016b2b07:-163150207,63d20b8d0e782300ab5e239e016b2b07:-163150207,5a9da2091338230026bdf2c7417bfadc:544786759</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_54fd34bbdba14340c73ad12c5e9619fe</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>700</order><property display_value="snd_ui16dp.profile.menu.link_preferences" name="snd_ui16dp.profile.menu.link_preferences">ffddb47bdba14340c73ad12c5e9619f0</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@thewhitespace.io</sys_created_by><sys_created_on>2017-10-08 11:55:53</sys_created_on><sys_id>54fd34bbdba14340c73ad12c5e9619fe</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.profile.menu.link_preferences.[ws] UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_54fd34bbdba14340c73ad12c5e9619fe</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:25</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>1134799119</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>a088f468db372bc0957ddd3b5e9619ba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149870000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.link_preferences.[ws] UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>70aa05a855202300bdef04affd49418f</update_guid>
+<update_guid_history>70aa05a855202300bdef04affd49418f:771455447,bd130f8df5782300e824a4fc2dc474fa:771455447</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_c803b3f40f1a6a00c55a09ece1050e63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Use an AJAX call to check if the user is impersonating  before adding the 'Unimpersonate' option to the profile menu. Set false to always show 'Unimpersonate'.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.profile.menu.check_impersonation</name><read_roles/><suffix>snd_ui16dp.profile.menu.check_impersonation</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-04 07:51:39</sys_created_on><sys_id>c803b3f40f1a6a00c55a09ece1050e63</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.profile.menu.check_impersonation</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_c803b3f40f1a6a00c55a09ece1050e63</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-04 07:59:38</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=c803b3f40f1a6a00c55a09ece1050e63"/></record_update>]]></payload>
+<payload_hash>768971172</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>a488f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a250000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.profile.menu.check_impersonation</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>7caa05a80c2023008eb16342cda8ca7b</update_guid>
+<update_guid_history>7caa05a80c2023008eb16342cda8ca7b:2133471404,7ad2c78db97823006d2632b79c04c75b:232999881,7ad2c78db97823006d2632b79c04c75b:232999881,129da2098738230008067baaaa3be4c6:-1228649073</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_script_4b9d58530fd81200c55a09ece1050e8f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_script"&gt;&lt;sys_ui_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;description&gt;UI16 Developer Patch&amp;#13;
+Configuration can be modified using system properties prefixed with 'snd_ui16dp'.&lt;/description&gt;&lt;global&gt;true&lt;/global&gt;&lt;name&gt;snd_ui16_developer_patch&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/*!
+  UI16 Developer Patch
+  Configuration can be modified using system properties prefixed with 'snd_ui16dp'.
+
+  James Neale &lt;james@thewhitespace.io&gt;
+*/
+
+if (!window.top.hasOwnProperty('snd_ui16_developer_patched')) {
+  jslog('snd_ui16_developer_patch loading in top window.');
+  (function (t) {
+    function fail(jqxhr, settings, e) {
+      if(jqxhr.readyState === 0){
+         jslog('snd_ui16_developer_patch unable to load script.');
+      } else {
+         // script loaded but failed to parse
+         jslog('snd_ui16_developer_patch script loading error: ' + e.toString());
+      }
+    }
+
+    var i;
+
+    t.snd_ui16_developer_patched = null;
+
+    // run an interval because depending on ServiceNow version, this script
+    // can load before jQuery does.
+    i = setInterval(function () {
+      var $ = t.jQuery;
+      if (typeof $ == 'function') {
+        clearInterval(i);
+
+        $.when(
+            $.getScript('/snd_ui16_developer_patch_menus.jsdbx').fail(fail),
+            $.getScript('/snd_ui16_developer_patch.jsdbx').fail(fail),
+            $.Deferred(function (deferred){
+                $(deferred.resolve);
+            })
+        ).done(function(){
+          t.snd_ui16_developer_patch();
+        });
+      }
+    }, 500);
+  })(window.top);
+}
+
+else if (window.top.snd_ui16_developer_patched != null) {
+  //jslog('snd_ui16_developer_patch already applied!');
+}
+
+else if (window == window.top) {
+  (function ($, window) {
+
+    var config = {
+
+      // Patch the navigator
+      navigator: {
+
+        // Modify the width of the navigator
+        width: parseInt("${snd_ui16dp.navigator.width}", 10) || 285,
+      },
+
+      // Patch the navigator right click context menu
+      navigator_context: {
+        active: "${snd_ui16dp.navigator.context.active}" == "true",
+
+        // Should the new Edit Pencil be hidden from menu items in Istanbul?
+        // Should only hide with this context menu patch active.
+        hide_pencil: "${snd_ui16dp.navigator.pencil.hide}" == "true"
+      },
+
+      // Patch the application and update set picker widths
+      picker_width: {
+        active: "${snd_ui16dp.pickers.active}" == "true",
+
+        // Integer. Maximum width in pixels we would ever really need
+        max_width: parseInt("${snd_ui16dp.pickers.width.max}", 10) || 300,
+
+        // Integer. Minimum width in pixels.
+        // 120 is the ServiceNow default, but we use 60 in case the window is
+        // small and the search bar is opened (otherwise it's unusable)
+        min_width: parseInt("${snd_ui16dp.pickers.width.min}", 10) || 60,
+
+        // Integer. Time in ms to wait so that everything can load.
+        load_timeout: parseInt("${snd_ui16dp.pickers.timeout}", 10) || 2000,
+
+        // the width of the header search when it has focus
+        max_search_width: parseInt("${snd_ui16dp.pickers.max_search_width}", 10) || 150
+      },
+
+      // Patch the header picker icons
+      picker_icon: {
+        active: "${snd_ui16dp.pickers.icon.active}" == "true",
+        domain_table: "${snd_ui16dp.pickers.icon.domain_table}" || "domain"
+      },
+
+      profile_menu: {
+        active: "${snd_ui16dp.profile.menu.active}" == "true",
+        check_impersonation: "${snd_ui16dp.profile.menu.check_impersonation}" == "true",
+        link_preferences: "${snd_ui16dp.profile.menu.link_preferences}" == "true"
+      },
+
+      dev_studio: {
+        allow_multiple: "${sn_devstudio.allow.multi.app.development}" == "true"
+      }
+
+    };
+
+    /**
+     * A jQuery menu plugin for running context menus
+     *
+     * @param  {Object} settings An object for configuring the menu.
+     * @return {Array} The jQuery array of elements being worked on.
+     */
+    $.fn.snd_ui16dp_menu = (function () {
+
+      var menus = {},
+          loaded = false;
+
+      function getMenuPosition($menu, mouse, direction, scrollDir) {
+        var win = $(window)[direction](),
+            scroll = $(window)[scrollDir](),
+            menu = $menu[direction](),
+            position = mouse + scroll;
+
+        // opening menu would pass the side of the page
+        if (mouse + menu &gt; win &amp;&amp; menu &lt; mouse) position -= menu;
+
+        return position;
+      }
+
+      function closeAll() {
+        for (var id in menus) {
+          $(id).hide();
+        }
+      }
+
+      return function (settings) {
+
+        menus[settings.menu_id] = true;
+
+        if (!loaded) {
+
+          //make sure menus close on main document click
+          $(document).click(function () {
+            closeAll();
+          });
+
+          // make sure menus close if any frame is clicked
+          $('iframe').on('load', function () {
+             $(this).contents().on('click', function () {
+                closeAll();
+             });
+          });
+
+          loaded = true;
+        }
+
+        return this.each(function () {
+
+          // Open context menu
+          $(this).on(settings.event || 'click', settings.selector, function (e) {
+
+            var $menu;
+
+            closeAll();
+
+            // perform native action if pressing control
+            if (e.ctrlKey) return;
+
+            //open menu
+            $menu = $(settings.menu_id);
+            $menu.data("invokedOn", $(e.target))
+              .show()
+              .css({
+                  position: "absolute",
+                  left: getMenuPosition($menu, e.clientX, 'width', 'scrollLeft'),
+                  top: getMenuPosition($menu, e.clientY, 'height', 'scrollTop')
+              })
+              .off('click')
+              .on('click', 'a', function (e) {
+                  $menu.hide();
+
+                  var $invokedOn = $menu.data("invokedOn");
+                  var $selectedMenu = $(e.target);
+
+                  settings.callback.call(this, $invokedOn, $selectedMenu);
+              });
+
+            return false;
+          });
+        });
+      };
+    })();
+
+    // check if the letter of the build tag is valid H &gt;= I = false
+    /**
+     * Check if the letter of the build tag is valid. e.g. H &gt;= I == false.
+     *
+     * @param  {String} letter The first letter of the version (e.g. K for Kingston)
+     * @return {Boolean}       Returns true if the system version is at least the
+     *                         version specified as being the minimum.
+     */
+    function minVersion(letter) {
+      var tag = '${glide.buildtag}';
+      var tag_word = tag.match(/glide-([^-]+)/);
+      var tag_letter = tag_word ? tag_word[1].toString()[0].toUpperCase() : '';
+      return letter &lt;= tag_letter;
+    }
+
+    /**
+     * Add a custom stylesheet to the page.
+     *
+     * @param {String} css The CSS to inject.
+     */
+    function addStyle(css) {
+      $(document).ready(function() {
+        $('&lt;style type="text/css"&gt;\n' + css + '\n&lt;/style&gt;').appendTo(document.head);
+      });
+    }
+
+    /**
+     * Check if we are using UI16 by looking for the overview help element.
+     * Thanks to Tim Boelema for finding this element and sharing on community.
+     *
+     * Works in Helsinki, Istanbul, Jakarta and Kingston EA
+     *
+     * @return {Boolean}
+     */
+    function isUI16() {
+      if (!window.top.angular) return false;
+      var a = window.top.angular.element('overviewhelp').attr('page-name');
+      return a == 'ui16' || a == 'helsinki';
+    }
+
+    /**
+     * Create the context menus dynamically
+     *
+     * @param  {String} id    The ID of the context menu.
+     * @param  {Array}  items An array of menu item objects - specifying at least a name.
+     * @return {undefined}
+     */
+    function createContextMenu(id, items) {
+      var menu, item, i;
+      menu = '&lt;ul id="' + id + '" class="dropdown-menu" role="menu" ' +
+             'style="display: none; z-index: 999;"&gt;';
+
+      for (i = 0; i &lt; items.length; i++) {
+        item = items[i];
+        if (item.role &amp;&amp; !userHasRole(item.role)) {
+          continue;
+        }
+        if (item.name === '-') {
+          menu += '&lt;li class="divider"&gt;&lt;/li&gt;';
+        } else {
+          menu += '&lt;li&gt;&lt;a href="#" tabindex="-1"&gt;' + item.name + '&lt;/a&gt;&lt;/li&gt;';
+        }
+      }
+
+      menu += '&lt;/ul&gt;';
+      $('body').append(menu);
+    }
+
+    /**
+     * Execute a menu item.
+     *
+     * @param  {Object} item The item to execute.
+     * @param  {Array}  args Optional. An array of arguments to pass to functions.
+     * @return {undefined}
+     */
+    function executeMenuItem(item, options) {
+      var target = item.target,
+          url = item.url,
+          fn = item.fn;
+
+      if (item.name == 'Refresh') {
+        refreshPickers();
+        return;
+      }
+      if (fn &amp;&amp; typeof fn == 'function') {
+        fn.call(window, options, config);
+      }
+      if (url) {
+        if (typeof url == 'function') {
+          url = url.call(window, options, config);
+        }
+        url += '';
+        if (!url) {
+          jslog('No URL to open.');
+          return;
+        }
+        if (typeof target == 'function') {
+          target = target.call(window, options, config);
+        }
+        if (!target || target == 'gsft_main') {
+          openInFrame(url);
+        } else {
+          window.open(url, target);
+        }
+      }
+    }
+
+    /**
+     * Allow quick acces to navigator records. Right clicking a navigator module
+     * will open a context menu.
+     *
+     * @return {undefined}
+     */
+    function navigatorMenuPatch() {
+      function callback(invokedOn, selectedMenu) {
+        var module = invokedOn.closest('a'),
+            id = module.attr('data-id'),
+            url = '/sys_app_module.do',
+            text = selectedMenu.text();
+
+        if (!id) {
+          id = module.attr('id');
+          if (post_helsinki) {
+            if (!module.hasClass('app-node') &amp;&amp; !module.hasClass('module-node')) {
+              jslog('Not an app or module node.');
+              return;
+            }
+          }
+          if (!id) {
+            jslog('No data id.');
+            return;
+          }
+        }
+        module.$id = id;
+
+        var item, i;
+        for (i = 0; i &lt; items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              module: module
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.navigator(),
+          post_helsinki;
+
+      if (!userHasRole('teamdev_configure_instance')) {
+        return;
+      }
+
+      createContextMenu('snd_ui16dp_navigator_module_menu', items);
+
+      post_helsinki = minVersion('I');
+
+      // a[id] was introduced in Istanbul. This is backwards compatible to G and H UI16
+      $('#gsft_nav').snd_ui16dp_menu({
+          event: 'contextmenu',
+          selector: 'a[data-id],a[id]',
+          menu_id: "#snd_ui16dp_navigator_module_menu",
+          callback: callback
+      });
+      jslog('snd_ui16_developer_patch navigator patch applied');
+    }
+
+    // hide the edit pencil which was added in Istanbul
+    /**
+     * Hide the edit pencil which was added in Istanbul. We don't need it if we have
+     * the context menu - it just takes up space.
+     *
+     * @return {undefined}
+     */
+    function navigatorPencilPatch() {
+      var post_helsinki = minVersion('I');
+      if (post_helsinki) {
+
+        // hide the new pencil icon - we have edit via context menu
+        addStyle(
+          '#gsft_nav .sn-aside-btn.nav-edit-app,' +
+          '#gsft_nav .sn-widget-list-action.nav-edit-module' +
+          '{' +
+            'display: none !important;' +
+          '}'
+        );
+
+        // removing the pencil means we can shrink the navigator and give some
+        // more width to the main frame (-28px)
+        var width = config.navigator.width; // normally 285
+        if (width != 285) {
+          $('.navpage-nav').width(width);
+          $('#nav_west').width(width);
+          $('.navpage-main').css('left', width + 'px');
+        }
+
+        jslog('snd_ui16_developer_patch navigator pencil patch applied.');
+      }
+    }
+
+    /**
+     * Update the developer choice list widths to be a bit wider.
+     * This gets the widths of various header elements and calculates the
+     * remaining width available before dividing it between the pickers shown.
+     *
+     * @param  {Integer} offset An offset to take into account when calculating
+     *                          the maximum width available.
+     * @return {undefined}
+     */
+    function pickerWidthPatch(offset) {
+      var max_w = config.picker_width.max_width,
+          min_w = config.picker_width.min_width,
+          pickers = $('.navpage-pickers .selector:has(select)'),
+          nav_w,
+          logo_w = 0,
+          float_w,
+          diff,
+          size;
+
+      if (!pickers.length) {
+        jslog('snd_ui16_developer_patch picked width patch failed. No pickers found.');
+        return;
+      }
+
+      $('.navpage-pickers').css('display', '');
+      pickers.css('width', ''); // reset so we recalculate
+
+      nav_w = $('header.navpage-header').width();
+      if (minVersion('M')) { // Madrid introduced flex grow
+        $('div.navbar-header').children().outerWidth(function (i, w) { logo_w += w; });
+      } else {
+        logo_w = $('div.navbar-header').outerWidth();
+      }
+      float_w = $('div.navbar-right').outerWidth();
+
+      diff = nav_w - logo_w - float_w - (offset || 0);
+
+      size = 100 + (diff / pickers.length);
+
+      size = size &gt; max_w ? max_w : size;
+
+      if (size &lt; min_w) {
+        $('.navpage-pickers').css('display', 'none');
+        jslog('snd_ui16_developer_patch pickers hidden as less than minimum width (' + size + ' &lt; ' + min_w + ')');
+      } else {
+        pickers.css('width', size);
+        jslog('snd_ui16_developer_patch picker width patch applied (diff: ' + diff + '; size: ' + size + ')');
+      }
+    }
+
+    /**
+     * Patch a picker icon so it becomes interactive and has a context menu.
+     *
+     * @param  {String}   name      The name of the context menu - forms the ID.
+     * @param  {String}   className The class name of the icon to patch.
+     * @param  {Array}    items     An array of item objects to generate the menu.
+     * @param  {Function} callback  The function to call when something is clicked.
+     * @return {undefined}
+     */
+    function patchIcon(name, className, items, callback) {
+      var id = 'snd_ui16dp_' + name + '_menu',
+          post_istanbul = minVersion('J'),
+          icon;
+      createContextMenu(id, items);
+      icon = $('.' + className + ' ' + (post_istanbul ? 'a.btn-icon' : 'span.label-icon'));
+      if (icon.length) {
+        icon.snd_ui16dp_menu({
+          menu_id: "#" + id,
+          callback: callback
+        }).css('cursor', 'pointer');
+        jslog('snd_ui16_developer_patch icon picker patch applied to ' + name + ' picker.');
+      } else {
+        jslog('snd_ui16_developer_patch icon picker patch unable to find ' + name + ' picker.');
+      }
+    }
+
+
+    /**
+     * Patch the Update Set picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchUpdateSetPickerIcon() {
+      function callback(invokedOn, selectedMenu) {
+        var set_id = set_id = $('#update_set_picker_select').val(),
+            text = selectedMenu.text(),
+            item,
+            i;
+        for (i = 0; i &lt; items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              set_id: set_id
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.update_set();
+
+      patchIcon('updateset', 'concourse-update-set-picker', items, callback);
+    }
+
+    /**
+     * Patch the Application picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchAppPickerIcon() {
+
+      function getAppId() {
+        var app_id = $('#application_picker_select').val();
+        return app_id.split(':').pop(); // remove 'string:' prefix
+      }
+
+      function callback(invokedOn, selectedMenu) {
+        var app_id = getAppId(),
+            text = selectedMenu.text(),
+            item,
+            i;
+
+        for (i = 0; i &lt; items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              app_id: app_id
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var items = snd_ui16_developer_patch_menus.application();
+
+      patchIcon('application', 'concourse-application-picker', items, callback);
+    }
+
+    /**
+     * Patch the Domain picker icon with a context menu.
+     *
+     * @return {undefined}
+     */
+    function patchDomainPickerIcon() {
+
+      function getDomainId() {
+        var sys_id = $('#domain_picker_select').val();
+        if (sys_id) {
+          sys_id = sys_id.split(':').pop(); // remove 'string:' prefix
+        }
+        return sys_id;
+      }
+
+      function callback(invokedOn, selectedMenu) {
+        var domain_id = getDomainId(),
+            text = selectedMenu.text(),
+            item,
+            i;
+        for (i = 0; i &lt; items.length; i++) {
+          item = items[i];
+          if (item.name == text) {
+            executeMenuItem(item, {
+              domain_table: domain_table,
+              domain_id: domain_id
+            });
+            return;
+          }
+        }
+        jslog('Unknown item selected: "' + text + '"');
+      }
+
+      var domain_table = config.picker_icon.domain_table;
+      var items = snd_ui16_developer_patch_menus.domain();
+
+      patchIcon('domain', 'concourse-domain-picker', items, callback);
+    }
+
+    /**
+     * Make the all the developer picker icons (update set, application, domain)
+     * show a context menu when they are clicked.
+     *
+     * @return {undefined}
+     */
+    function pickerIconPatch() {
+      patchUpdateSetPickerIcon();
+      patchAppPickerIcon();
+      if (userHasRole('domain_admin')) {
+        patchDomainPickerIcon();
+      }
+    }
+
+    /**
+     * Patch the user profile menu by adding more items to it, most importantly
+     * the ability to unimpersonate.
+     *
+     * @return {undefined}
+     */
+    function profileMenuPatch() {
+      var user_dropdown = $('#user_info_dropdown').next('ul'),
+          impersonate_item;
+
+      function addUnimpersonateItem() {
+        impersonate_item.parent().after('&lt;li&gt;&lt;a href="snd_ui16dp_unimpersonate.do"' +
+          ' target="gsft_main"&gt;Unimpersonate&lt;/a&gt;');
+        jslog('snd_ui16_developer_patch user menu patch applied.');
+      }
+
+      // will only add unimpersonate link if impersonate link is found
+      impersonate_item = user_dropdown.find('[sn-modal-show="impersonate"]');
+
+      if (impersonate_item) {
+        if (config.profile_menu.check_impersonation) {
+          $.ajax({
+            url: '/snd_ui16dp.do?action=getImpersonationDetails',
+            type: 'GET',
+            dataType: 'JSON'
+          }).done(function (data) {
+            if (data.result &amp;&amp; data.result.is_impersonating) {
+              addUnimpersonateItem();
+            } else {
+              jslog('snd_ui16_developer_patch confirmed user is not impersonating.');
+            }
+          }).fail(function () {
+            jslog('snd_ui16_developer_patch failed to check impersonation details.');
+          });
+        } else {
+          addUnimpersonateItem();
+        }
+      }
+
+      // add link to user preferences if admin
+      if (config.profile_menu.link_preferences &amp;&amp; userHasRole()) {
+        user_dropdown.children().first()
+            .after('&lt;li&gt;&lt;a href="/sys_user_preference_list.do?sysparm_query=user=' + top.NOW.user.userID + '" ' +
+                   'target="gsft_main"&gt;Preferences&lt;/a&gt;&lt;/li&gt;');
+      }
+    }
+
+    /**
+     * Open a url in the main frame.
+     *
+     * @param  {String} target The target URL to load.
+     * @return {undefined}
+     */
+    function openInFrame(target) {
+      jslog('snd_ui16_developer_patch opening target: ' + target);
+      var frame = $('#gsft_main');
+      if (frame.length) {
+        frame[0].src = target;
+      } else {
+        jslog('&gt; gsftMain frame not found.');
+      }
+    }
+
+    /**
+     * Refresh all the developer pickers (Update Set, Application, Domain).
+     * This is really handy when you want to be sure you are working in the
+     * correct place.
+     *
+     * @return {undefined}
+     */
+    function refreshPickers() {
+      var injector = angular.element('body').injector();
+      try {
+        injector.get('snCustomEvent').fire('sn:refresh_update_set');
+      } catch (e) {}
+      try {
+        injector.get('applicationService').getApplicationList();
+      } catch (e) {}
+      try {
+        injector.get('domainService').getDomainList();
+      } catch (e) {}
+    }
+
+    /**
+     * Check if the user has a give role. Will always return true for admin.
+     *
+     * @param  {String} role The role to check.
+     * @return {Boolean}
+     */
+    function userHasRole(role) {
+      var roles = (',' + window.NOW.user.roles + ','),
+          is_admin = roles.indexOf(',admin,') &gt; -1;
+      if (role) {
+        return is_admin || roles.indexOf(',' + role + ',') &gt; -1;
+      }
+      return is_admin;
+    }
+
+    /**
+     * The main patch function that executes everything.
+     *
+     * @return {undefined}
+     */
+    function patch() {
+
+      var nav_interval,
+          picker_interval;
+
+      // === run the navigator module opening mod ===
+      if (config.navigator_context.active) {
+        navigatorMenuPatch();
+
+        if (config.navigator_context.hide_pencil) {
+          navigatorPencilPatch();
+        }
+      }
+
+      // === enhance the picker width ===
+      if (config.picker_width.active) {
+
+        // as we are dynamically resizing the header pickers we can remove the
+        // medium width restriction introduced in later versions of UI16
+        $('.navpage-pickers').removeClass('hidden-md');
+
+        // set the picker width once the page has loaded
+        setTimeout(function () {
+          pickerWidthPatch();
+
+          // use an interval to double check the picker width every second
+          // for the same load time specified by the user (double chance)
+          picker_interval = setInterval(function () {
+            pickerWidthPatch();
+          }, 1000);
+          setTimeout(function () {
+            clearInterval(picker_interval);
+          }, config.picker_width.load_timeout);
+
+        }, config.picker_width.load_timeout);
+
+        // resizing the window will resize the pickers
+        angular.element(window).on('resize', function () {
+          pickerWidthPatch();
+        });
+
+        $('input#sysparm_search').focus(function () {
+          //$j('.navpage-header-content .user-name').hide();
+          pickerWidthPatch(config.picker_width.max_search_width);
+        });
+        $('input#sysparm_search').blur(function () {
+          setTimeout(function () {
+            //$j('.navpage-header-content .user-name').show();
+            pickerWidthPatch();
+          }, 500); // the length of time it takes for blur to occur
+        });
+      }
+
+      // === make the picker icons clickable ===
+      if (config.picker_icon.active) {
+        pickerIconPatch();
+      }
+
+      // === augment the user menu ===
+      if (config.profile_menu.active) {
+        profileMenuPatch();
+      }
+    }
+
+    window.top.snd_ui16_developer_patch = function () {
+      try {
+        if (window.top.snd_ui16_developer_patched != null) {
+          jslog('snd_ui16_developer_patch already applied.');
+          return;
+        }
+        if (!isUI16()) {
+          window.top.snd_ui16_developer_patched = false;
+          jslog('snd_ui16_developer_patch ignored. Not UI16.');
+        } else {
+          jslog('Running snd_ui16_developer_patch...');
+          patch();
+          window.top.snd_ui16_developer_patched = true;
+        }
+      } catch (e) {
+        jslog('[ws] UI16 Developer Patch mod failure: ' + e);
+      }
+    };
+
+  })(jQuery, window);
+}]]&gt;&lt;/script&gt;&lt;script_name/&gt;&lt;sys_class_name&gt;sys_ui_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@snd&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-18 04:26:09&lt;/sys_created_on&gt;&lt;sys_id&gt;4b9d58530fd81200c55a09ece1050e8f&lt;/sys_id&gt;&lt;sys_mod_count&gt;225&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16_developer_patch&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[ws] UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_script_4b9d58530fd81200c55a09ece1050e8f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@thewhitespace.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-02-19 21:54:20&lt;/sys_updated_on&gt;&lt;use_scoped_format&gt;false&lt;/use_scoped_format&gt;&lt;/sys_ui_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>345715411</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>a488f468db372bc0957ddd3b5e9619bc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149530000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16_developer_patch</target_name>
+<type>UI Script</type>
+<update_domain>global</update_domain>
+<update_guid>478770a4b3372bc07c3e339eb6147584</update_guid>
+<update_guid_history>478770a4b3372bc07c3e339eb6147584:-1232712121,e973b0a4dab323004be00b264e9b0119:-1889632177,50f1b0a47eb32300e36f18b0f5bb0012:1958621811,20b1b0240bb3230061ebf7d8b9d4a339:1596972403,1120bca073b323003a7177b507a391b9:956620774,0daa05a85620230075f1816dea5ec8a4:-1647399269,efd20b8d4e782300ba0afbb75f302b44:966661079,efd20b8d4e782300ba0afbb75f302b44:966661079,f16d26c5143823009deb7e8385d0fe11:966661079,f16d26c5143823009deb7e8385d0fe11:966661079,b3e72acd82f42300fc05f18bab3eef0f:1479825059</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_799327e6db343200736d712ebf9619ab</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Remove the module pencil when the module is patched with the context menu in builds &gt;= Istanbul.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.navigator.pencil.hide</name><read_roles/><suffix>snd_ui16dp.navigator.context.active</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2017-02-10 23:48:57</sys_created_on><sys_id>799327e6db343200736d712ebf9619ab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>snd_ui16dp.navigator.pencil.hide</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_799327e6db343200736d712ebf9619ab</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:48:57</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=799327e6db343200736d712ebf9619ab"/></record_update>]]></payload>
+<payload_hash>1153456465</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>a888f468db372bc0957ddd3b5e9619b8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149a90000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.pencil.hide</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>74aa05a8b4202300771f4f713a34205b</update_guid>
+<update_guid_history>74aa05a8b4202300771f4f713a34205b:2128041113,29d2878d6c782300692e6ab1aa1d2a95:439340156,29d2878d6c782300692e6ab1aa1d2a95:439340156,da9da209a03823003ff02451602cb0bd:572291074</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ddf671980f9e2a00c55a09ece1050ea8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Time in ms to wait so that everything can load before the picker patch is applied. Default is 2000.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.timeout</name><read_roles/><suffix>snd_ui16dp.pickers.timeout</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:31:38</sys_created_on><sys_id>ddf671980f9e2a00c55a09ece1050ea8</sys_id><sys_mod_count>5</sys_mod_count><sys_name>snd_ui16dp.pickers.timeout</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_ddf671980f9e2a00c55a09ece1050ea8</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-04 10:16:53</sys_updated_on><type>integer</type><value>2000</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ddf671980f9e2a00c55a09ece1050ea8"/></record_update>]]></payload>
+<payload_hash>-745045943</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>a888f468db372bc0957ddd3b5e9619bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a5b0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.timeout</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>fcaa05a8b0202300be8094f2691fc39b</update_guid>
+<update_guid_history>fcaa05a8b0202300be8094f2691fc39b:-1099271919,57d2c78d66782300321f817b722858be:106280272,57d2c78d66782300321f817b722858be:106280272,169da20980382300488d8ebeb384fada:14672062</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_ca9efe140f126a00c55a09ece1050e57</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="[ws] UI16 Developer Patch">7d67b2100f126a00c55a09ece1050ee3</application><assessment/><content_page/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Properties</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order/><override_menu_roles>false</override_menu_roles><query>system_properties_ui.do?sysparm_title=[ws]%20UI16%20Developer%20Patch%20Properties&amp;sysparm_category=[ws]%20UI16%20Developer%20Patch</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_class_name>sys_app_module</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:44:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ca9efe140f126a00c55a09ece1050e57</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Properties</sys_name><sys_overrides/><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_app_module_ca9efe140f126a00c55a09ece1050e57</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:50</sys_updated_on><timeline_page/><title>Properties</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-688794182</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>ac88f468db372bc0957ddd3b5e9619b7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a330000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>Properties</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>f4aa05a82b202300b1ba3301cf9b5953</update_guid>
+<update_guid_history>f4aa05a82b202300b1ba3301cf9b5953:1183157570,24d2878df5782300927078ae14d34329:-337675467,24d2878df5782300927078ae14d34329:-337675467,60d2878d00782300cb21bcf74ceb191e:0,969da209013823008083e25e0cce4db4:1560835874</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_f2d97a500f126a00c55a09ece1050e8e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>500</order><property display_value="snd_ui16dp.pickers.icon.active" name="snd_ui16dp.pickers.icon.active">3d27f1980f9e2a00c55a09ece1050e55</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_id>f2d97a500f126a00c55a09ece1050e8e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.pickers.icon.active.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_f2d97a500f126a00c55a09ece1050e8e</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:49:45</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>-868314758</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>ac88f468db372bc0957ddd3b5e9619ba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a770000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.icon.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a864202300af3a8ff12bd73094</update_guid>
+<update_guid_history>78aa05a864202300af3a8ff12bd73094:-1298660350,ecd2878d0e782300e7d0cd0dd046e434:-702725800,ecd2878d0e782300e7d0cd0dd046e434:-702725800,9a9da2090d3823008b0de6ccf1a6d6d1:778435242</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_application_7d67b2100f126a00c55a09ece1050ee3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>SND UI16 Developer Patch</name><order>100</order><roles>admin</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:12:35</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7d67b2100f126a00c55a09ece1050ee3</sys_id><sys_mod_count>4</sys_mod_count><sys_name>[ws] UI16 Developer Patch</sys_name><sys_overrides/><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_app_application_7d67b2100f126a00c55a09ece1050ee3</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:51:46</sys_updated_on><title>[ws] UI16 Developer Patch</title><view_name/></sys_app_application></record_update>]]></payload>
+<payload_hash>1018805636</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e088f468db372bc0957ddd3b5e9619b7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149ca0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>[ws] UI16 Developer Patch</target_name>
+<type>Application Menu</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a82b20230043cc34eb1177f151</update_guid>
+<update_guid_history>78aa05a82b20230043cc34eb1177f151:81697356,64d2878d0c7823007a241c1c55ca0522:-1623291585,64d2878d0c7823007a241c1c55ca0522:-1623291585,de9da209e5382300dbf0001ce39ab6a5:-139326353</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_c27379180f9e2a00c55a09ece1050e85</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The maximum width option for the Update Set, Application and Domain header choice lists. Default is 300.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.width.max</name><read_roles/><suffix>snd_ui16dp.pickers.width.max</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:17:04</sys_created_on><sys_id>c27379180f9e2a00c55a09ece1050e85</sys_id><sys_mod_count>4</sys_mod_count><sys_name>snd_ui16dp.pickers.width.max</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_c27379180f9e2a00c55a09ece1050e85</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-04 10:17:09</sys_updated_on><type>integer</type><value>300</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=c27379180f9e2a00c55a09ece1050e85"/></record_update>]]></payload>
+<payload_hash>2109557648</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e088f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a160000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.max</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>fcaa05a8342023003757573b2f5f7379</update_guid>
+<update_guid_history>fcaa05a8342023003757573b2f5f7379:1075121736,66d2c78d60782300a183007fa00e1d1a:-446485715,66d2c78d60782300a183007fa00e1d1a:-446485715,9e9da209c038230014bef88082337fc3:1807693031</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_508d621c0fde2a00c55a09ece1050e0f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[window.top.location = '/';]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint/&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;g:evaluate&gt;
+		gs.getSession().onlineUnimpersonate()
+	&lt;/g:evaluate&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;snd_ui16dp_unimpersonate&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;james@sndeveloper.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2016-10-02 13:30:07&lt;/sys_created_on&gt;&lt;sys_id&gt;508d621c0fde2a00c55a09ece1050e0f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;snd_ui16dp_unimpersonate&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[ws] UI16 Developer Patch"&gt;e96776dc0fde2a00c55a09ece1050eef&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_508d621c0fde2a00c55a09ece1050e0f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;james@sndeveloper.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2016-10-02 14:14:30&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<payload_hash>625094205</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e088f468db372bc0957ddd3b5e9619bc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149790000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp_unimpersonate</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a804202300526cd5ba72933aa2</update_guid>
+<update_guid_history>78aa05a804202300526cd5ba72933aa2:-1949567675,6bd20b8d4e7823002d4666979a638642:-216522526,6bd20b8d4e7823002d4666979a638642:-216522526,5e9da209e23823002f22de1a2d5d03de:-417511000</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_4d0475940f9e2a00c55a09ece1050e6b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The default (minimum) width option for the Update Set and Application choice lists. Default is 30 to support small screens as much as possible.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>snd_ui16dp.pickers.width.min</name><read_roles/><suffix>snd_ui16dp.pickers.width.min</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 09:18:10</sys_created_on><sys_id>4d0475940f9e2a00c55a09ece1050e6b</sys_id><sys_mod_count>7</sys_mod_count><sys_name>snd_ui16dp.pickers.width.min</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_4d0475940f9e2a00c55a09ece1050e6b</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2016-10-04 10:16:29</sys_updated_on><type>integer</type><value>30</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=4d0475940f9e2a00c55a09ece1050e6b"/></record_update>]]></payload>
+<payload_hash>483627807</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e488f468db372bc0957ddd3b5e9619b8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149650000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.min</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>f4aa05a8da202300976d15bf6af0d159</update_guid>
+<update_guid_history>f4aa05a8da202300976d15bf6af0d159:-1877412825,05d2878d0c7823007484ed281a21826d:-603219428,05d2878d0c7823007484ed281a21826d:-603219428,5a9da20965382300c5c37ed38a9111bb:-1150219062</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_fed97a500f126a00c55a09ece1050e8d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>400</order><property display_value="snd_ui16dp.pickers.active" name="snd_ui16dp.pickers.active">ded7f5980f9e2a00c55a09ece1050e66</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:23:19</sys_created_on><sys_id>fed97a500f126a00c55a09ece1050e8d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>snd_ui16dp.pickers.active.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_fed97a500f126a00c55a09ece1050e8d</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:49:45</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>-1674807314</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e488f468db372bc0957ddd3b5e9619bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14aaf0000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.active.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>f0aa05a80f20230075a431028180c299</update_guid>
+<update_guid_history>f0aa05a80f20230075a431028180c299:-1382806666,b2d2c78dcd782300740bd2febc02b999:295246598,b2d2c78dcd782300740bd2febc02b999:295246598,169da209793823000c3a18b8c4255ed7:2101872628</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_e96776dc0fde2a00c55a09ece1050eef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app"><sys_app action="INSERT_OR_UPDATE"><active>true</active><enforce_license>log</enforce_license><js_level>helsinki_es5</js_level><licensable>true</licensable><license_model>none</license_model><logo/><menu display_value="[ws] UI16 Developer Patch">7d67b2100f126a00c55a09ece1050ee3</menu><name>[ws] UI16 Developer Patch</name><private>false</private><restrict_table_access>false</restrict_table_access><runtime_access_tracking/><scope>global</scope><scoped_administration>false</scoped_administration><short_description>Enhance the UI16 experience</short_description><source>e96776dc0fde2a00c55a09ece1050eef</source><store_correlation_id/><store_url/><sys_class_name>sys_app</sys_class_name><sys_code/><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 14:12:35</sys_created_on><sys_id>e96776dc0fde2a00c55a09ece1050eef</sys_id><sys_mod_count>11</sys_mod_count><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2019-02-19 21:54:47</sys_updated_on><template/><trackable>true</trackable><user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</user_role><vendor/><vendor_prefix/><version>2.5.0</version></sys_app></record_update>]]></payload>
+<payload_hash>-614360034</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e888f468db372bc0957ddd3b5e9619b7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c148e10000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>[ws] UI16 Developer Patch</target_name>
+<type>Custom Application</type>
+<update_domain>global</update_domain>
+<update_guid>7258702813372bc0f58e4b194e3b733d</update_guid>
+<update_guid_history>7258702813372bc0f58e4b194e3b733d:-614360034,8a24f4e4dbb32300b8e97dc3f9dbc292:1506061443,70aa05a8a02023000b7149e04b86813a:-1886267420,94d2878d70782300fc966b164018d417:-1330732238,94d2878d70782300fc966b164018d417:-1330732238,c69da209e738230005af0217fe1c7ca1:566321012</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_dde443180f126a00c55a09ece1050ec7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>900</order><property display_value="snd_ui16dp.pickers.width.min" name="snd_ui16dp.pickers.width.min">4d0475940f9e2a00c55a09ece1050e6b</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2016-10-02 15:11:33</sys_created_on><sys_id>dde443180f126a00c55a09ece1050ec7</sys_id><sys_mod_count>3</sys_mod_count><sys_name>snd_ui16dp.pickers.width.min.[ws] UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_dde443180f126a00c55a09ece1050ec7</sys_update_name><sys_updated_by>james@thewhitespace.io</sys_updated_by><sys_updated_on>2017-10-08 11:56:25</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>1951263809</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>e888f468db372bc0957ddd3b5e9619ba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c14a450000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.pickers.width.min.[ws] UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>f0aa05a841202300ab8dfeaa205e7793</update_guid>
+<update_guid_history>f0aa05a841202300ab8dfeaa205e7793:535700361,74d2878deb7823003376f917bc436969:2142552959,74d2878deb7823003376f917bc436969:2142552959,d29da2097e382300ec2376e93e03fad0:1638355311</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_49a3e32adb343200736d712ebf961923</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="[ws] UI16 Developer Patch">c125b5580f9e2a00c55a09ece1050e59</category><order>200</order><property display_value="snd_ui16dp.navigator.pencil.hide" name="snd_ui16dp.navigator.pencil.hide">799327e6db343200736d712ebf9619ab</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>james@sndeveloper.com</sys_created_by><sys_created_on>2017-02-10 23:49:11</sys_created_on><sys_id>49a3e32adb343200736d712ebf961923</sys_id><sys_mod_count>1</sys_mod_count><sys_name>snd_ui16dp.navigator.pencil.hide.SND UI16 Developer Patch</sys_name><sys_package display_value="[ws] UI16 Developer Patch" source="e96776dc0fde2a00c55a09ece1050eef">e96776dc0fde2a00c55a09ece1050eef</sys_package><sys_policy/><sys_scope display_value="[ws] UI16 Developer Patch">e96776dc0fde2a00c55a09ece1050eef</sys_scope><sys_update_name>sys_properties_category_m2m_49a3e32adb343200736d712ebf961923</sys_update_name><sys_updated_by>james@sndeveloper.com</sys_updated_by><sys_updated_on>2017-02-10 23:49:45</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<payload_hash>114193192</payload_hash>
+<remote_update_set display_value="[ws] UI16 Developer Patch - 2.5.0">ac88f468db372bc0957ddd3b5e9619b6</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>james@thewhitespace.io</sys_created_by>
+<sys_created_on>2019-02-19 21:55:28</sys_created_on>
+<sys_id>ec88f468db372bc0957ddd3b5e9619b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16907c149320000001</sys_recorded_at>
+<sys_updated_by>james@thewhitespace.io</sys_updated_by>
+<sys_updated_on>2019-02-19 21:55:28</sys_updated_on>
+<table/>
+<target_name>snd_ui16dp.navigator.pencil.hide.SND UI16 Developer Patch</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_guid>78aa05a8d82023006ac6703d2fd0eb80</update_guid>
+<update_guid_history>78aa05a8d82023006ac6703d2fd0eb80:1109858096,51d2878dec7823006e244eeb06ce4485:-674867530,51d2878dec7823006e244eeb06ce4485:-674867530,569da20908382300f545386c059602cb:31715580</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

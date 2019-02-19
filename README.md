@@ -1,6 +1,6 @@
 # UI16 Developer Patch
 
-[**Download v2.4 from Share**](https://share.servicenow.com/app.do#/detailV2/364d4596db228b00c4f256594b961961/details)
+[**Download v2.5 from Share**](https://developer.servicenow.com/app.do#!/share/contents/9650888_ui16_developer_patch)
 
 *UI16 Developer Patch* is an addon for ServiceNow that enhances the UI16
 interface to add some features that were taken away in the upgrade to UI16 or
@@ -150,7 +150,7 @@ Modify the width of the navigator in pixels. Default 285.
 Allow the navigator to be patched. Default true.
 
 *config.navigator_context.hide_pencil*
-Hide the pencil icon from later versions of UI16 (use Edit in context menu instead).
+Hide the pencil icon from later versions of UI16 (use Edit in context menu instead). Default true.
 
 *config.picker_width.active*
 Allow the pickers to be patched. Default true.

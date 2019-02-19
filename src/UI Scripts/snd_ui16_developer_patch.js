@@ -373,8 +373,9 @@ else if (window == window.top) {
 
         // hide the new pencil icon - we have edit via context menu
         addStyle(
-          'div.sn-widget-list-action.nav-edit-module,' +
-          'a.sn-aside-btn.nav-edit-app {' +
+          '#gsft_nav .sn-aside-btn.nav-edit-app,' +
+          '#gsft_nav .sn-widget-list-action.nav-edit-module' +
+          '{' +
             'display: none !important;' +
           '}'
         );
@@ -406,7 +407,7 @@ else if (window == window.top) {
           min_w = config.picker_width.min_width,
           pickers = $('.navpage-pickers .selector:has(select)'),
           nav_w,
-          logo_w,
+          logo_w = 0,
           float_w,
           diff,
           size;
@@ -420,7 +421,11 @@ else if (window == window.top) {
       pickers.css('width', ''); // reset so we recalculate
 
       nav_w = $('header.navpage-header').width();
-      logo_w = $('div.navbar-header').outerWidth();
+      if (minVersion('M')) { // Madrid introduced flex grow
+        $('div.navbar-header').children().outerWidth(function (i, w) { logo_w += w; });
+      } else {
+        logo_w = $('div.navbar-header').outerWidth();
+      }
       float_w = $('div.navbar-right').outerWidth();
 
       diff = nav_w - logo_w - float_w - (offset || 0);
