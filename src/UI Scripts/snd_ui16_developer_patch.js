@@ -2,7 +2,7 @@
   UI16 Developer Patch
   Configuration can be modified using system properties prefixed with 'snd_ui16dp'.
 
-  James Neale <james@thewhitespace.io>
+  James Neale <james@sharelogic.com>
 */
 
 if (!window.top.hasOwnProperty('snd_ui16_developer_patched')) {
@@ -228,8 +228,12 @@ else if (window == window.top) {
     function isUI16() {
       if (!window.top.angular) return false;
       var a = window.top.angular.element('overviewhelp').attr('page-name');
-      return a == 'ui16' || a == 'helsinki';
+      return a && !isPolaris();
     }
+
+    function isPolaris() {
+      return window.top.NOW.isPolarisEnabled == 'true';
+  }
 
     /**
      * Create the context menus dynamically
@@ -768,7 +772,7 @@ else if (window == window.top) {
           window.top.snd_ui16_developer_patched = true;
         }
       } catch (e) {
-        jslog('[ws] UI16 Developer Patch mod failure: ' + e);
+        jslog('UI16 Developer Patch mod failure: ' + e);
       }
     };
 

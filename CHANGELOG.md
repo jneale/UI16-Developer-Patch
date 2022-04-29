@@ -1,6 +1,9 @@
 # [UI16 Developer Patch](https://github.com/thewhitespace/UI16-Developer-Patch)
 Useful patches for the ServiceNow UI16 interface. Find more at www.thewhitespace.io.
 
+### Version 2.6
+* San Diego compatibility fix.
+
 ### Version 2.5
 * Madrid support for application picker width.
 * Fixed support for hiding the module edit pencil icon (use context menu).
