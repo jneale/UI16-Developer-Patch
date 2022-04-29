@@ -1,6 +1,6 @@
 # UI16 Developer Patch
 
-[**Download v2.5 from Share**](https://developer.servicenow.com/app.do#!/share/contents/9650888_ui16_developer_patch)
+[**Download v2.6 from Share**](https://developer.servicenow.com/connect.do#!/share/contents/9650888_ui16_developer_patch)
 
 *UI16 Developer Patch* is an addon for ServiceNow that enhances the UI16
 interface to add some features that were taken away in the upgrade to UI16 or
